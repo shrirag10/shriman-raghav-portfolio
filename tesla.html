@@ -149,14 +149,14 @@
 
     <div class="project-item bento-card flex flex-col overflow-hidden" data-category="reliability">
       <div class="h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b" style="border-color: var(--outline-variant);">
-        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">smart_toy</span>
+        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">visibility</span>
       </div>
       <div class="p-6 flex flex-col flex-grow">
-        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">VIGIL AI Diagnostic Agent</h3>
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">VIGIL Pedestrian Detection System</h3>
         <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
-          <div><strong style="color: var(--on-surface);">S:</strong> Factory maintenance needed faster equipment diagnostics.</div>
-          <div><strong style="color: var(--on-surface);">A:</strong> Deployed a RAG-based AI diagnostic agent into maintenance systems.</div>
-          <div><strong style="color: var(--on-surface);">R:</strong> Accelerated root-cause analysis, cutting response time by 17%.</div>
+          <div><strong style="color: var(--on-surface);">S:</strong> Forklifts posed pedestrian safety risks in high-traffic factory zones.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Deployed a deep learning camera system with YOLO/RT-DETR models.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Achieved real-time pedestrian detection, enhancing factory safety.</div>
         </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="tesla4">View Details</button>
       </div>
@@ -227,10 +227,10 @@ window.PROJECT_DATA = {
     "link": "#"
   },
   "tesla4": {
-    "title": "VIGIL AI Diagnostic Agent",
-    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Factory maintenance technicians were spending excessive time manually sifting through thousands of pages of static PDF manuals, PLC ladder logic diagrams, and historical maintenance logs whenever a machine threw a complex fault code.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Accelerate the root-cause analysis workflow by providing technicians with instant, context-aware diagnostic information directly on their mobile maintenance tablets.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Developed a Retrieval-Augmented Generation (RAG) based AI diagnostic agent. Originally deployed inside Tesla, I rebuilt the core architecture externally from scratch as 'VIGIL' to strictly adhere to NDA constraints. I built a document ingestion pipeline to vectorize equipment manuals and historical repair tickets into a FAISS database. The LLM was configured to query this database in real-time when a fault code was entered, generating step-by-step troubleshooting guides tailored to the specific machine state.</p><p><strong class='text-on-surface'>Result:</strong> The AI agent successfully automated the information retrieval process, reducing the average equipment diagnostic response time by 17%. Technicians were able to bypass the manual search process and immediately begin targeted repairs, minimizing production delays.</p>",
+    "title": "VIGIL Pedestrian Detection System",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Industrial forklifts operating in high-traffic factory environments posed significant pedestrian safety risks due to operator blind spots and complex, dynamic surroundings.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Develop a real-time, edge-deployed computer vision system to detect pedestrians in proximity to material handling equipment and trigger proactive safety interventions.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Engineered 'VIGIL', a deep learning camera project (rebuilt externally from scratch to adhere to NDA constraints). The system utilizes 7 swappable state-of-the-art vision models (YOLO/RT-DETR) for high-speed inference. I developed configurable dynamic safety zones around the vehicle footprint, built a live React monitoring dashboard, and implemented optional Kafka/gRPC pipelines for enterprise-level fleet streaming.</p><p><strong class='text-on-surface'>Result:</strong> The vision system successfully achieved high-accuracy, real-time pedestrian detection. By providing immediate situational awareness and intrusion alerts, the system drastically mitigated collision risks and enhanced overall safety compliance on the factory floor.</p>",
     "img": "",
-    "link": "#"
+    "link": "https://github.com/shrirag10/VIGIL"
   },
   "tesla5": {
     "title": "Retractable Castor-Wheel Drivetrain",
