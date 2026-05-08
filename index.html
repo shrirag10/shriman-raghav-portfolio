@@ -302,35 +302,35 @@
               @media (min-width: 1024px) { .venn-scale { transform: scale(0.9); } }
               @media (min-width: 1280px) { .venn-scale { transform: scale(1); } }
             </style>
-            <div class="relative w-[450px] h-[450px] flex items-center justify-center venn-scale">
+            <div class="relative flex items-center justify-center venn-scale" style="width: 450px; height: 450px;">
               <div class="relative w-full h-full flex items-center justify-center">
                 <!-- Center circle/text -->
-                <div class="absolute z-10 text-center flex flex-col items-center justify-center w-48 h-48 rounded-full border-2 border-dashed backdrop-blur-sm" style="border-color: var(--primary); background-color: color-mix(in srgb, var(--surface) 60%, transparent);">
+                <div class="absolute z-10 text-center flex flex-col items-center justify-center rounded-full border-2 border-dashed backdrop-blur-sm" style="width: 12rem; height: 12rem; border-color: var(--primary); background-color: color-mix(in srgb, var(--surface) 60%, transparent);">
                   <div class="font-space font-bold tracking-[0.3em] text-xl" style="color: var(--primary);">S H R I</div>
                   <div class="font-bold text-[0.7rem] mt-1 tracking-widest" style="color: var(--primary);">MOBILE ROBOTS</div>
                   <div class="text-[0.65rem] mt-2 leading-tight" style="color: var(--on-surface-variant);">AMR Deployment<br>Path Planning</div>
                 </div>
                 
                 <!-- AI/ML/DL/RL (Top Left) -->
-                <div class="absolute w-[17rem] h-[17rem] rounded-full border border-dashed flex flex-col items-start justify-start pt-14 pl-12 text-center -translate-x-16 -translate-y-16" style="border-color: #8b5cf6; background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0.02) 100%);">
+                <div class="absolute rounded-full border border-dashed flex flex-col items-start justify-start pt-14 pl-12 text-center" style="width: 17rem; height: 17rem; transform: translate(-4rem, -4rem); border-color: #8b5cf6; background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0.02) 100%);">
                   <div class="w-full font-bold text-[0.8rem] mb-1" style="color: #8b5cf6;">AI/ML/DL/RL</div>
                   <div class="w-full text-[0.65rem] leading-tight" style="color: var(--on-surface-variant);">Deep Learning<br>Reinforcement Learning</div>
                 </div>
 
                 <!-- AV / CV (Top Right) -->
-                <div class="absolute w-[17rem] h-[17rem] rounded-full border border-dashed flex flex-col items-end justify-start pt-16 pr-12 text-center translate-x-16 -translate-y-12" style="border-color: #10b981; background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, rgba(16,185,129,0.02) 100%);">
+                <div class="absolute rounded-full border border-dashed flex flex-col items-end justify-start pt-16 pr-12 text-center" style="width: 17rem; height: 17rem; transform: translate(4rem, -3rem); border-color: #10b981; background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, rgba(16,185,129,0.02) 100%);">
                   <div class="w-full font-bold text-[0.8rem] mb-1" style="color: #10b981;">AV / CV</div>
                   <div class="w-full text-[0.65rem] leading-tight" style="color: var(--on-surface-variant);">Computer Vision<br>Sensor Fusion</div>
                 </div>
 
                 <!-- HUMANOID ROBOTICS (Bottom Left) -->
-                <div class="absolute w-[17rem] h-[17rem] rounded-full border border-dashed flex flex-col items-start justify-end pb-16 pl-10 text-center -translate-x-12 translate-y-16" style="border-color: #f59e0b; background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.02) 100%);">
+                <div class="absolute rounded-full border border-dashed flex flex-col items-start justify-end pb-16 pl-10 text-center" style="width: 17rem; height: 17rem; transform: translate(-3rem, 4rem); border-color: #f59e0b; background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.02) 100%);">
                   <div class="w-full font-bold text-[0.8rem] mb-1 leading-tight" style="color: #f59e0b;">HUMANOID<br>ROBOTICS</div>
                   <div class="w-full text-[0.65rem] leading-tight" style="color: var(--on-surface-variant);">Bipedal Locomotion<br>Control Systems</div>
                 </div>
 
                 <!-- INDUSTRIAL ENGG (Bottom Right) -->
-                <div class="absolute w-[17rem] h-[17rem] rounded-full border border-dashed flex flex-col items-end justify-end pb-14 pr-12 text-center translate-x-16 translate-y-20" style="border-color: #a855f7; background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(168,85,247,0.02) 100%);">
+                <div class="absolute rounded-full border border-dashed flex flex-col items-end justify-end pb-14 pr-12 text-center" style="width: 17rem; height: 17rem; transform: translate(4rem, 5rem); border-color: #a855f7; background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(168,85,247,0.02) 100%);">
                   <div class="w-full font-bold text-[0.8rem] mb-1 leading-tight" style="color: #a855f7;">INDUSTRIAL<br>ENGG</div>
                   <div class="w-full text-[0.65rem] leading-tight" style="color: var(--on-surface-variant);">Manufacturing Automation<br>Process Optimization</div>
                 </div>
