@@ -46,23 +46,72 @@
   </div>
 </nav>
 
-<main class="max-w-[800px] mx-auto px-8 pt-32 pb-24 flex flex-col gap-6 min-h-[70vh] justify-center">
-  <section class="bento-card p-12 text-center flex flex-col items-center">
-    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: var(--surface-container-low);">
-      <span class="material-symbols-outlined text-3xl" style="color: var(--primary);">mail</span>
-    </div>
-    <h1 class="text-headline-md font-serif mb-4" style="color: var(--on-background);">Let's Connect.</h1>
-    <p class="text-body-lg max-w-md mx-auto mb-8" style="color: var(--on-surface-variant);">I'm always open to discussing opportunities in robotics, manufacturing engineering, and autonomous systems.</p>
+<main class="max-w-[1600px] mx-auto px-8 pt-40 pb-24 flex flex-col min-h-[75vh] justify-center w-full">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start w-full">
     
-    <div class="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-sm">
-      <a href="mailto:shrirag10@gmail.com" class="flex-1 py-4 rounded-lg font-space text-[0.85rem] uppercase tracking-widest transition-transform active:scale-95 text-center" style="background-color: var(--primary); color: var(--on-primary);">
-        Email Me
-      </a>
-      <a href="https://linkedin.com/in/shriman-raghav" target="_blank" class="flex-1 py-4 rounded-lg border font-space text-[0.85rem] uppercase tracking-widest hover:bg-surface-container transition-colors text-center" style="border-color: var(--outline); color: var(--on-surface);">
-        LinkedIn
-      </a>
+    <!-- Left: Massive Typography -->
+    <div class="lg:col-span-6 flex flex-col gap-8">
+      <h1 class="font-serif leading-[0.95] tracking-tight text-gradient-animate pb-2" style="font-size: clamp(3.5rem, 7vw, 7rem);">
+        Let's build the future of autonomy.
+      </h1>
+      <p class="text-xl max-w-md leading-relaxed mt-4" style="color: var(--on-surface-variant);">
+        I'm always open to exploring new opportunities in robotics, autonomous systems, and manufacturing engineering. Whether it's a full-time role, a collaborative project, or just a conversation about the field—my inbox is open.
+      </p>
+      
+      <div class="mt-8 flex flex-col gap-3 font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">
+        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-lg" style="color: var(--on-surface-variant);">location_on</span> Boston, MA</div>
+        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-lg" style="color: var(--on-surface-variant);">commute</span> Fremont, CA</div>
+      </div>
     </div>
-  </section>
+
+    <!-- Right: Formspree & Links -->
+    <div class="lg:col-span-6 flex flex-col gap-8">
+      
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/mqkenwov" method="POST" class="glass-card rounded-2xl p-8 flex flex-col gap-6">
+        <h2 class="font-space text-xs uppercase tracking-widest font-bold mb-2" style="color: var(--on-surface-variant);">Send a direct message</h2>
+        
+        <div class="flex flex-col gap-2">
+          <label class="text-xs font-bold font-space uppercase" style="color: var(--on-surface);">Name</label>
+          <input type="text" name="name" required class="w-full bg-transparent border-b py-2 focus:outline-none focus:border-primary transition-colors rounded-none" style="border-color: var(--outline-variant); color: var(--on-surface);" placeholder="Jane Doe">
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="text-xs font-bold font-space uppercase" style="color: var(--on-surface);">Email</label>
+          <input type="email" name="email" required class="w-full bg-transparent border-b py-2 focus:outline-none focus:border-primary transition-colors rounded-none" style="border-color: var(--outline-variant); color: var(--on-surface);" placeholder="jane@example.com">
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="text-xs font-bold font-space uppercase" style="color: var(--on-surface);">Message</label>
+          <textarea name="message" required rows="3" class="w-full bg-transparent border-b py-2 focus:outline-none focus:border-primary transition-colors resize-none rounded-none" style="border-color: var(--outline-variant); color: var(--on-surface);" placeholder="Hello..."></textarea>
+        </div>
+
+        <button type="submit" class="mt-4 w-full py-4 rounded-lg font-space text-[0.85rem] uppercase tracking-widest transition-transform active:scale-95 text-center flex justify-center items-center gap-2 hover:opacity-90 border-none cursor-pointer" style="background-color: var(--primary); color: var(--on-primary);">
+          Send Message <span class="material-symbols-outlined text-sm">send</span>
+        </button>
+      </form>
+
+      <!-- Glass Links -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="mailto:shrirag10@gmail.com" class="glass-card flex-1 rounded-xl p-6 flex justify-between items-center group">
+          <div class="flex flex-col gap-1">
+            <span class="font-space text-[0.65rem] uppercase tracking-widest font-bold" style="color: var(--secondary);">Email</span>
+            <span class="text-sm sm:text-base font-bold" style="color: var(--on-surface);">shrirag10@gmail.com</span>
+          </div>
+          <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1" style="color: var(--primary);">arrow_forward</span>
+        </a>
+
+        <a href="https://linkedin.com/in/shriman-raghav" target="_blank" class="glass-card flex-1 rounded-xl p-6 flex justify-between items-center group">
+          <div class="flex flex-col gap-1">
+            <span class="font-space text-[0.65rem] uppercase tracking-widest font-bold" style="color: var(--secondary);">LinkedIn</span>
+            <span class="text-sm sm:text-base font-bold" style="color: var(--on-surface);">in/shriman-raghav</span>
+          </div>
+          <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1" style="color: var(--primary);">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
 </main>
 
 <footer class="py-8 border-t mt-auto" style="border-color: var(--outline-variant); background-color: var(--surface);">
