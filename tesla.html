@@ -27,12 +27,12 @@
   <link rel="icon" type="image/png" href="images/favicon.png" />
 
   <!-- Google tag (gtag.js) - Placeholder -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4THJSZZJP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-J4THJSZZJP');
   </script>
 </head>
 <body class="font-inter antialiased flex flex-col min-h-screen">
@@ -152,7 +152,7 @@
         <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">smart_toy</span>
       </div>
       <div class="p-6 flex flex-col flex-grow">
-        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">VIGIL (Internal: SENTINEL)</h3>
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">VIGIL AI Diagnostic Agent</h3>
         <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
           <div><strong style="color: var(--on-surface);">S:</strong> Factory maintenance needed faster equipment diagnostics.</div>
           <div><strong style="color: var(--on-surface);">A:</strong> Deployed a RAG-based AI diagnostic agent into maintenance systems.</div>
@@ -227,8 +227,8 @@ window.PROJECT_DATA = {
     "link": "#"
   },
   "tesla4": {
-    "title": "VIGIL (Internal: SENTINEL)",
-    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Factory maintenance technicians were spending excessive time manually sifting through thousands of pages of static PDF manuals, PLC ladder logic diagrams, and historical maintenance logs whenever a machine threw a complex fault code.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Accelerate the root-cause analysis workflow by providing technicians with instant, context-aware diagnostic information directly on their mobile maintenance tablets.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Developed a Retrieval-Augmented Generation (RAG) based AI diagnostic agent. Originally deployed as SENTINEL inside Tesla, I rebuilt the core architecture externally from scratch as 'VIGIL' to strictly adhere to NDA constraints. I built a document ingestion pipeline to vectorize equipment manuals and historical repair tickets into a FAISS database. The LLM was configured to query this database in real-time when a fault code was entered, generating step-by-step troubleshooting guides tailored to the specific machine state.</p><p><strong class='text-on-surface'>Result:</strong> The AI agent successfully automated the information retrieval process, reducing the average equipment diagnostic response time by 17%. Technicians were able to bypass the manual search process and immediately begin targeted repairs, minimizing production delays.</p>",
+    "title": "VIGIL AI Diagnostic Agent",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Factory maintenance technicians were spending excessive time manually sifting through thousands of pages of static PDF manuals, PLC ladder logic diagrams, and historical maintenance logs whenever a machine threw a complex fault code.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Accelerate the root-cause analysis workflow by providing technicians with instant, context-aware diagnostic information directly on their mobile maintenance tablets.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Developed a Retrieval-Augmented Generation (RAG) based AI diagnostic agent. Originally deployed inside Tesla, I rebuilt the core architecture externally from scratch as 'VIGIL' to strictly adhere to NDA constraints. I built a document ingestion pipeline to vectorize equipment manuals and historical repair tickets into a FAISS database. The LLM was configured to query this database in real-time when a fault code was entered, generating step-by-step troubleshooting guides tailored to the specific machine state.</p><p><strong class='text-on-surface'>Result:</strong> The AI agent successfully automated the information retrieval process, reducing the average equipment diagnostic response time by 17%. Technicians were able to bypass the manual search process and immediately begin targeted repairs, minimizing production delays.</p>",
     "img": "",
     "link": "#"
   },
