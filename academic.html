@@ -11,6 +11,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
 <link rel="stylesheet" href="tailwind.css" />
+
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shriman Raghav Srinivasan — Robotics &amp; Manufacturing Engineer" />
+  <meta property="og:description" content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />
+  <meta property="og:image" content="images/shriman_portfolio.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shriman Raghav Srinivasan — Robotics &amp; Manufacturing Engineer" />
+  <meta name="twitter:description" content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />
+  <meta name="twitter:image" content="images/shriman_portfolio.png" />
+
 </head>
 <body class="font-inter antialiased flex flex-col min-h-screen">
 
@@ -77,7 +88,11 @@
       <img src="https://raw.githubusercontent.com/shrirag10/ROBUSTWALKER/main/assets/go1_trotting.png" alt="ROBUSTWALKER" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>smart_toy</span></div>'"/>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">ROBUSTWALKER</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">PPO blind locomotion for Unitree Go1. 57-dim proprioceptive obs, 12-dim torque actions, dual MuJoCo/Genesis backend. 85x speedup, 1.41 m/s trot, 15N push recovery.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Unitree Go1 required robust blind locomotion.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Built PPO with MuJoCo/Genesis backend & 12-dim torque control.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Reached 1.41 m/s trot, 15N push recovery, 85x training speedup.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="robustwalker">View Details</button>
       </div>
     </div>
@@ -86,7 +101,11 @@
       <img src="https://raw.githubusercontent.com/shrirag10/IronStride/master/results/ppo_vs_sac_comparison.gif" alt="IronStride" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>accessibility_new</span></div>'"/>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">IronStride</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">PPO vs SAC on Unitree H1 humanoid standing in MuJoCo. PPO converges 7x faster. SAC exploited reward loophole (learned kneeling). Both reach 20s stable episodes.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Unitree H1 needed stable standing control in MuJoCo.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Evaluated PPO vs SAC, identifying SAC reward exploitation.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Both reached 20s stability; PPO converged 7x faster.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="ironstride">View Details</button>
       </div>
     </div>
@@ -95,7 +114,11 @@
       <img src="https://raw.githubusercontent.com/shrirag10/LatentIntercept/main/videos/trained_1m_demo.gif" alt="LatentIntercept" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>precision_manufacturing</span></div>'"/>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">LatentIntercept</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Franka arm intercepts a sliding puck using TD-MPC2 world model + MPPI planning. 12-timestep lookahead enables anticipatory catches impossible with reactive control.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Dynamic target interception required anticipatory control.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Deployed TD-MPC2 world model + MPPI planning for a Franka arm.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> 12-timestep lookahead enabled successful sliding puck catches.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="latentintercept">View Details</button>
       </div>
     </div>
@@ -104,7 +127,11 @@
       <img src="images/latentintercept.png" alt="VisionTouch" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>visibility</span></div>'"/>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">VisionTouch</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">IBVS closed-loop pick-and-place for Franka Panda in PyBullet. 4 detection backends: ground-truth, color, GroundingDINO, SAM. Image Jacobian drives 6-DOF velocity commands.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Pick-and-place task needed robust visual servoing.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Implemented IBVS using GroundingDINO, SAM, and image Jacobians.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Achieved closed-loop 6-DOF velocity control in PyBullet.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="visiontouch">View Details</button>
       </div>
     </div>
@@ -113,7 +140,11 @@
       <img src="https://raw.githubusercontent.com/shrirag10/Neuflowv3/main/results/readme_vis/vkitti_scene18_0.png" alt="NeuFlow v3" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>layers</span></div>'"/>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">NeuFlow v3</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Replaced NeuFlow v2's convex upsampler with an implicit neural decoder (3-scale InfiniDepth fusion). Best EPE 3.15px on VKITTI2. Sharper boundaries at depth discontinuities.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Optical flow needed sharper depth discontinuity boundaries.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Replaced convex upsampler with a 3-scale implicit neural decoder.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Achieved best EPE of 3.15px on the VKITTI2 benchmark.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="neuflowv3">View Details</button>
       </div>
     </div>
@@ -122,7 +153,11 @@
       <img src="images/sgas.png" alt="3D Mapping RTAB SLAM" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>map</span></div>'"/>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">3D-Mapping-RTAB-SLAM</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">RTABMap depth-based SLAM in Northeastern's texture-poor tunnels. ORB-SLAM failed in 25m; RTABMap mapped 200m+ with consistent loop closure. ROS 2 + GTSAM backend.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Texture-poor tunnels caused standard ORB-SLAM failures at 25m.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Configured RTABMap depth-based SLAM with ROS 2 and GTSAM.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Successfully mapped 200m+ with consistent loop closures.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="rtab">View Details</button>
       </div>
     </div>
@@ -131,7 +166,11 @@
       <img src="https://raw.githubusercontent.com/shrirag10/Dead-Reckoning/main/analysis/Estimated%20trajectory.png" alt="Dead Reckoning" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>explore</span></div>'"/>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Dead-Reckoning</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">IMU + magnetometer + GPS sensor fusion. Hard/soft-iron calibration cut yaw error from ±35° to ±4°. Complementary filter + EKF — under 2m RMSE over 500m GPS-denied route.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Unreliable GPS required robust inertial sensor fusion.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Applied hard/soft-iron calibration, complementary filter, and EKF.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Cut yaw error to ±4° and achieved &lt;2m RMSE over a 500m route.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="deadreckoning">View Details</button>
       </div>
     </div>
@@ -142,7 +181,11 @@
       </div>
       <div class="p-6 flex flex-col flex-grow">
         <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Improved-LLM-A-star</h3>
-        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Hybrid LLM + A* path planner. LLM-generated semantic waypoints reduce node exploration by ~21.6% on 20x20 grids while maintaining path optimality.</p>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> A* pathfinding suffered from excessive node exploration.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Integrated LLM to generate semantic guiding waypoints.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Reduced exploration by ~21.6% while maintaining optimal paths.</div>
+        </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="llmastar">View Details</button>
       </div>
     </div>
