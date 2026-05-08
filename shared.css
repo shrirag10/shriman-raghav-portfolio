@@ -1,0 +1,126 @@
+/* ====================================================
+   SHARED DESIGN TOKENS & COMPONENTS
+   Simple Portfolio — Shriman Raghav Srinivasan
+   ==================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --surface: #ffffff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f5f4f1;
+  --surface-container: #eae8df;
+  --surface-container-high: #dfdcd0;
+  --on-surface: #1a1a19;
+  --on-surface-variant: #52524f;
+  --outline: #d2cec0;
+  --outline-variant: #e8e6e1;
+  --primary: #cc1414;
+  --on-primary: #ffffff;
+  --secondary: #cc1414;
+  --secondary-container: #fae6e6;
+  --on-secondary-container: #8a0b0b;
+  --background: #fbfaf5;
+  --on-background: #1a1a19;
+  --shadow: 0px 4px 20px rgba(0,0,0,0.04);
+}
+
+body {
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  color: var(--on-background);
+}
+
+html.dark body {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+.dark {
+  --surface: #121212;
+  --surface-container-lowest: #121212;
+  --surface-container-low: #1c1b1b;
+  --surface-container: #1e1e1e;
+  --surface-container-high: #2a2a2a;
+  --on-surface: #ffffff;
+  --on-surface-variant: #a0a0a0;
+  --outline: #ffffff;
+  --outline-variant: #2c2c2c;
+  --primary: #fc4444;
+  --on-primary: #111111;
+  --secondary: #fc4444;
+  --secondary-container: #5c0b0b;
+  --on-secondary-container: #ffffff;
+  --background: #000000;
+  --on-background: #ffffff;
+  --shadow: none;
+}
+
+body { background-color: var(--background); color: var(--on-background); }
+
+.bento-card {
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 1rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.bento-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--outline);
+}
+.dark .bento-card:hover {
+  background-color: var(--surface-container);
+  border-color: #3d3d3d;
+}
+
+.chip {
+  background-color: var(--surface-container);
+  color: var(--on-surface-variant);
+  border: 1px solid transparent;
+}
+.chip:hover { background-color: var(--surface-container-high); }
+.chip.active {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  border-color: var(--outline-variant);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.section-label {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--on-surface-variant);
+}
+.section-label::before {
+  content: ''; height: 1px; width: 24px;
+  background-color: var(--outline-variant);
+}
+
+/* Modal */
+#project-modal { display: none; opacity: 0; transition: opacity 0.3s ease; }
+#project-modal.open { display: flex; opacity: 1; }
+
+/* Mobile nav drawer */
+.mobile-nav-drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-nav-drawer.open {
+  max-height: 400px;
+}
+
+/* Image placeholder when no image available */
+.img-placeholder {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, var(--surface-container-high) 0%, var(--surface-container) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--on-surface-variant);
+}

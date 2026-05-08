@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Academic Research — Shriman Raghav Srinivasan</title>
+<meta name="description" content="Academic robotics, AI, and computer vision projects."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<link rel="stylesheet" href="tailwind.css" />
+</head>
+<body class="font-inter antialiased flex flex-col min-h-screen">
+
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md" style="background-color: color-mix(in srgb, var(--surface) 85%, transparent); border-bottom: 1px solid var(--outline-variant);">
+  <div class="max-w-[1600px] mx-auto flex justify-between items-center h-20 px-8">
+    <a href="index.html" class="flex items-center"><img src="images/shri_logo.png" alt="Shri" class="h-10" style="object-fit: contain; clip-path: inset(0 3px);" /></a>
+    <div class="hidden md:flex gap-12">
+      <a href="index.html"      class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Skills</a>
+      <a href="experience.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html"   class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center border transition-colors hover:bg-surface-container" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <a href="index.html#contact" class="hidden md:block border px-6 py-2 rounded-lg font-space text-[0.75rem] uppercase tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline); color: var(--on-surface);">Hire Me</a>
+      <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center border transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-nav-drawer md:hidden" style="background-color: var(--surface); border-top: 1px solid var(--outline-variant);">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex flex-col gap-5">
+      <a href="index.html"      class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Skills</a>
+      <a href="experience.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+      <a href="index.html#contact" class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">Hire Me →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-[1600px] mx-auto px-8 pt-32 pb-24 flex flex-col gap-16">
+
+  <!-- Header -->
+  <section>
+    <a href="projects.html" class="inline-flex items-center gap-1 text-[0.75rem] font-bold uppercase tracking-widest mb-8 hover:underline" style="color: var(--secondary);"><span class="material-symbols-outlined text-[1rem]">arrow_back</span> Back to Projects</a>
+    <div class="section-label mb-8">Northeastern University · MS Robotics</div>
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+      <div>
+        <h1 class="text-headline-md mb-2" style="color: var(--on-background);">Academic Research</h1>
+        <p class="text-body-sm" style="color: var(--on-surface-variant);">10 projects across SLAM, Computer Vision, Planning, and Reinforcement Learning.</p>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button class="chip active px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="all">All</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="rl">RL &amp; Control</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="vision">Vision</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="slam">SLAM</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="planning">Planning</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="manipulation">Manipulation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="rl">
+      <img src="https://raw.githubusercontent.com/shrirag10/ROBUSTWALKER/main/assets/go1_trotting.png" alt="ROBUSTWALKER" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>smart_toy</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">ROBUSTWALKER</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">PPO blind locomotion for Unitree Go1. 57-dim proprioceptive obs, 12-dim torque actions, dual MuJoCo/Genesis backend. 85x speedup, 1.41 m/s trot, 15N push recovery.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="robustwalker">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="rl">
+      <img src="https://raw.githubusercontent.com/shrirag10/IronStride/master/results/ppo_vs_sac_comparison.gif" alt="IronStride" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>accessibility_new</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">IronStride</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">PPO vs SAC on Unitree H1 humanoid standing in MuJoCo. PPO converges 7x faster. SAC exploited reward loophole (learned kneeling). Both reach 20s stable episodes.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="ironstride">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="manipulation">
+      <img src="https://raw.githubusercontent.com/shrirag10/LatentIntercept/main/videos/trained_1m_demo.gif" alt="LatentIntercept" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>precision_manufacturing</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">LatentIntercept</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Franka arm intercepts a sliding puck using TD-MPC2 world model + MPPI planning. 12-timestep lookahead enables anticipatory catches impossible with reactive control.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="latentintercept">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="manipulation">
+      <img src="images/latentintercept.png" alt="VisionTouch" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>visibility</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">VisionTouch</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">IBVS closed-loop pick-and-place for Franka Panda in PyBullet. 4 detection backends: ground-truth, color, GroundingDINO, SAM. Image Jacobian drives 6-DOF velocity commands.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="visiontouch">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="vision">
+      <img src="https://raw.githubusercontent.com/shrirag10/Neuflowv3/main/results/readme_vis/vkitti_scene18_0.png" alt="NeuFlow v3" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>layers</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">NeuFlow v3</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Replaced NeuFlow v2's convex upsampler with an implicit neural decoder (3-scale InfiniDepth fusion). Best EPE 3.15px on VKITTI2. Sharper boundaries at depth discontinuities.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="neuflowv3">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="slam">
+      <img src="images/sgas.png" alt="3D Mapping RTAB SLAM" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>map</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">3D-Mapping-RTAB-SLAM</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">RTABMap depth-based SLAM in Northeastern's texture-poor tunnels. ORB-SLAM failed in 25m; RTABMap mapped 200m+ with consistent loop closure. ROS 2 + GTSAM backend.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="rtab">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="slam">
+      <img src="https://raw.githubusercontent.com/shrirag10/Dead-Reckoning/main/analysis/Estimated%20trajectory.png" alt="Dead Reckoning" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>explore</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Dead-Reckoning</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">IMU + magnetometer + GPS sensor fusion. Hard/soft-iron calibration cut yaw error from ±35° to ±4°. Complementary filter + EKF — under 2m RMSE over 500m GPS-denied route.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="deadreckoning">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="planning">
+      <div class="h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">alt_route</span>
+      </div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Improved-LLM-A-star</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Hybrid LLM + A* path planner. LLM-generated semantic waypoints reduce node exploration by ~21.6% on 20x20 grids while maintaining path optimality.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="llmastar">View Details</button>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- Modal -->
+<div id="project-modal" class="fixed inset-0 z-[100] items-center justify-center p-4 bg-black/50 backdrop-blur-sm" style="display: none;">
+  <div class="bg-surface w-full max-w-3xl rounded-xl border flex flex-col overflow-hidden shadow-2xl relative" style="border-color: var(--outline-variant); max-height: 90vh;">
+    <button id="close-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors z-10">
+      <span class="material-symbols-outlined text-sm">close</span>
+    </button>
+    <div id="modal-media-container" class="w-full h-72 bg-surface-container flex-shrink-0 relative"></div>
+    <div class="p-8 overflow-y-auto flex flex-col gap-6">
+      <div>
+        <h2 id="modal-title" class="text-3xl font-serif font-bold mb-3" style="color: var(--on-background);"></h2>
+        <div id="modal-tags" class="flex flex-wrap gap-2 mb-4"></div>
+      </div>
+      
+      <div>
+        <h3 class="font-space text-xs uppercase tracking-widest font-bold mb-3" style="color: var(--secondary);">Overview</h3>
+        <div id="modal-desc" class="text-sm leading-relaxed" style="color: var(--on-surface-variant);"></div>
+      </div>
+
+      <div>
+        <h3 class="font-space text-xs uppercase tracking-widest font-bold mb-3" style="color: var(--secondary);">Key Results</h3>
+        <ul id="modal-results" class="list-disc pl-5 text-sm space-y-2" style="color: var(--on-surface-variant);"></ul>
+      </div>
+
+      <div class="pt-4 border-t mt-2" style="border-color: var(--outline-variant);">
+        <a id="modal-link" href="#" target="_blank" class="inline-flex px-6 py-3 rounded font-space text-xs uppercase tracking-widest transition-transform active:scale-95 items-center gap-2 font-bold" style="background-color: var(--primary); color: var(--on-primary); display:none;">
+          View Repository <span class="material-symbols-outlined text-[1rem]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-8 border-t mt-auto" style="border-color: var(--outline-variant); background-color: var(--surface);">
+  <div class="max-w-[1600px] mx-auto px-8 flex justify-between items-center text-xs font-space uppercase" style="color: var(--on-surface-variant);">
+    <div>© 2026 Shriman Raghav Srinivasan</div>
+    <div class="flex gap-6">
+      <a href="https://linkedin.com/in/shriman-raghav" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="https://github.com/shrirag10" target="_blank" class="hover:underline">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script>
+window.PROJECT_DATA = {
+  "robustwalker": {
+    "title": "ROBUSTWALKER",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Quadruped robots fail catastrophically in visually occluded environments — smoke, darkness, dust — where cameras and LiDAR lose tracking. The Go1 quadruped had no fallback for perception-denied scenarios. Most commercial locomotion stacks were camera-dependent, making them brittle in real industrial deployments where sensor occlusion is common.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Train a fully proprioceptive locomotion policy for the Unitree Go1 that tracks a commanded velocity purely from joint encoders and IMU — no cameras, no LiDAR, no exteroceptive sensing of any kind. The policy had to generalize across terrain types and resist 15N external pushes without recovery assistance.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Implemented PPO with a 57-dimensional proprioceptive observation vector (joint positions, velocities, torques, IMU orientation/angular velocity, command vector) and a 12-dimensional joint torque action space. Built a dual-backend training pipeline: MuJoCo for high-fidelity per-step debugging, Genesis (GPU-parallelized) for scale. Reward function penalized torque norm, foot slip, body pitch/roll deviation, and energy use; rewarded linear velocity tracking and base height stability. Applied domain randomization across friction coefficients, payload, actuator delays, and terrain slope to bridge sim-to-real.</p><p><strong class='text-on-surface'>Result:</strong> Policy converged to a stable 1.41 m/s diagonal trot, maintaining 20-second uninterrupted episodes. Recovered from 15N lateral pushes without falling. Genesis backend delivered 85x training throughput (2,000 → 169,000 steps/sec), compressing 20 hours of MuJoCo training to 14 minutes. MLP policy [256, 256] ran at 50 Hz on-board — well within real-time constraints.</p>",
+    "img": "https://raw.githubusercontent.com/shrirag10/ROBUSTWALKER/main/assets/go1_trotting.png",
+    "video": "https://raw.githubusercontent.com/shrirag10/ROBUSTWALKER/main/videos/go1_2min_demo.mp4",
+    "link": "https://github.com/shrirag10/ROBUSTWALKER"
+  },
+  "ironstride": {
+    "title": "IronStride",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Bipedal humanoid standing control is one of the hardest benchmarks for RL algorithms — 37 DoF, contact-rich dynamics, and a sparse reward landscape that makes naive exploration fail catastrophically. There was no rigorous head-to-head comparison of PPO versus SAC specifically on this task class, so teams choosing algorithms for humanoid projects lacked empirical guidance on sample efficiency vs. stability tradeoffs.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Systematically benchmark PPO (on-policy) versus SAC (off-policy) for upright standing and balance recovery on the Unitree H1 humanoid in MuJoCo. Measure convergence speed, policy entropy curves, stability, and final episode length — not just a single metric.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Implemented both algorithms with matched network architecture (MLP [256, 256]) and tuned reward functions independently — reward shaping was critical since naive height-only rewards caused both algorithms to learn kneeling as a locally stable solution. For PPO: clipped surrogate objective, GAE advantage estimation, entropy bonus. For SAC: automatic temperature tuning, twin Q-networks, soft updates. Instrumented training with reward component breakdown, value loss, and policy entropy logged to TensorBoard. Ran both to convergence (PPO: 2.5 hrs, SAC: 17 hrs) tracking when stable 20-second episodes first appeared.</p><p><strong class='text-on-surface'>Result:</strong> PPO converged 7x faster to stable upright standing (2.5 vs. 17 hours). SAC discovered a reward loophole — learning to kneel rather than stand — exposing a critical weakness in off-policy exploration for contact-rich tasks with sparse terminal conditions. After reward engineering, both achieved 20-second stable standing episodes. Benchmark results directly inform algorithm selection for future humanoid locomotion work.</p>",
+    "img": "https://raw.githubusercontent.com/shrirag10/IronStride/master/results/ppo_vs_sac_benchmark.png",
+    "gif": "https://raw.githubusercontent.com/shrirag10/IronStride/master/results/ppo_vs_sac_comparison.gif",
+    "link": "https://github.com/shrirag10/IronStride"
+  },
+  "latentintercept": {
+    "title": "LatentIntercept",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Reactive robotic controllers — those that respond only to current sensor readings — are fundamentally limited for catching fast-moving objects. A sliding air-hockey puck decelerates non-linearly under friction; by the time a purely reactive controller commands a move, the puck has already passed the intercept window. Predicting future states requires a world model, not just a policy.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Train a 7-DOF Franka Emika arm to anticipatorily intercept a sliding block using predictive planning rather than reactive tracking. The agent must learn a latent dynamics model of the puck and use it to plan intercept trajectories 12 timesteps ahead — approximately 1.2 seconds of lookahead.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Deployed TD-MPC2 (Temporal Difference — Model Predictive Control) inside the Genesis simulator. TD-MPC2 jointly learns a latent world model and a model-predictive value function, enabling MPPI (Model Predictive Path Integral) planning over hundreds of sampled trajectories at each timestep. Trained zero-shot (no pre-training on catch tasks) and then fine-tuned with 1M environment steps. Compared zero-shot generalization against trained policy across puck launch speeds of 500, 700, and 1000 mm/s.</p><p><strong class='text-on-surface'>Result:</strong> 12-timestep lookahead enabled consistent anticipatory interception across all speed conditions tested. Trained policy outperformed zero-shot baseline on high-speed trajectories (1000 mm/s). GIF demos show clean intercepts where the arm positions 200–300ms before puck arrival — impossible with reactive control alone. Genesis sim ran 50+ parallel environments simultaneously, making 1M steps tractable in under 2 hours.</p>",
+    "img": "https://raw.githubusercontent.com/shrirag10/LatentIntercept/main/videos/trained_1m_demo.gif",
+    "gif": "https://raw.githubusercontent.com/shrirag10/LatentIntercept/main/videos/trained_1m_catch.gif",
+    "link": "https://github.com/shrirag10/LatentIntercept"
+  },
+  "visiontouch": {
+    "title": "VisionTouch",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Open-loop pick-and-place fails the moment an object shifts from its expected pose by even a few millimeters — a reality in any unstructured workspace. Standard depth-camera pose estimation drifts under lighting changes and is brittle to partially occluded objects. A closed-loop visual controller that continuously corrects its approach using raw pixel feedback was needed.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Implement Image-Based Visual Servoing (IBVS) for a Franka Panda robot in PyBullet simulation. The controller must drive end-effector velocity purely from 2D image feature errors — no explicit 3D pose estimate — using four wrist-camera feature points that converge to target positions at grasp.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Formulated the image Jacobian (interaction matrix) mapping 2D pixel-space error to 6-DOF end-effector velocity commands in Cartesian space. Implemented four detection backends with identical interface: ground-truth bounding box, color-histogram tracking, GroundingDINO (zero-shot text-prompted detection), and SAM (Segment Anything Model for mask centroid). Exposed all four via a config flag for controlled comparison. Integrated with ROS 2 for RViz visualization of servoing trajectories and segmentation overlays. Diagnosed and fixed an inverted velocity sign bug from the downward-facing wrist camera convention — the robot was initially fleeing the target (\"Fleeing Robot\" bug).</p><p><strong class='text-on-surface'>Result:</strong> All four detection modes converged to grasp with sub-pixel feature error at steady state. GroundingDINO backend enabled zero-shot object selection by text prompt — no training data required. SAM mode produced sub-pixel centroid accuracy even on partially occluded targets. The corrected velocity convention produced clean exponential feature-error convergence matching theoretical IBVS behavior.</p>",
+    "img": "",
+    "link": "https://github.com/shrirag10/VisionTouch"
+  },
+  "neuflowv3": {
+    "title": "NeuFlow v3",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> NeuFlow v2 uses a convex upsampling module that averages learned mixing weights over 9 coarse-resolution neighbors to produce full-resolution flow. This approach systematically blurs flow boundaries at depth discontinuities — moving object edges — which is exactly where accurate optical flow matters most for downstream tasks like visual odometry and depth estimation.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Design and integrate a superior upsampling module into NeuFlow v2 that recovers sharp flow boundaries at moving object edges without a prohibitive increase in inference time. Target evaluation: VKITTI2 benchmark End-Point Error (EPE), compared against baseline v2.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Replaced the convex upsampler with a custom implicit neural decoder inspired by InfiniDepth architecture. The decoder queries pixel coordinates as continuous inputs, samples encoder feature maps at three scales (shallow/texture, mid/structure, deep/semantic), and fuses them via a learned gated residual scheme. This allows the decoder to selectively amplify high-frequency boundary information from shallow layers while preserving global motion coherence from deep layers. Trained on FlyingThings3D and fine-tuned on VKITTI2. Ablated each fusion scale independently to validate contribution.</p><p><strong class='text-on-surface'>Result:</strong> Achieved Best EPE of 3.15 pixels on VKITTI2, outperforming the convex upsampler baseline. Visual inspection shows dramatically sharper flow boundaries at vehicle/background transitions. 3-scale fusion outperformed both 1-scale and 2-scale ablations, confirming all three feature resolutions contribute independently. Inference overhead was minimal — implicit decoder adds ~4ms per forward pass on an RTX 4060.</p>",
+    "img": "https://raw.githubusercontent.com/shrirag10/Neuflowv3/main/results/readme_vis/vkitti_scene18_0.png",
+    "link": "https://github.com/shrirag10/Neuflowv3"
+  },
+  "rtab": {
+    "title": "3D-Mapping-RTAB-SLAM",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Northeastern University's underground tunnel system is a pathological SLAM environment: uniform concrete walls, near-zero visual texture, and long repeated corridors that cause feature-matching algorithms like ORB-SLAM to lose tracking within 30 seconds. Yet mobile robots must navigate these spaces for deliveries and maintenance — making it an ideal stress test for robust SLAM architectures.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Generate a drift-free 3D point cloud map of the tunnel system using a method that doesn't rely on visual feature matching. Evaluate whether RTABMap's depth-based graph SLAM could succeed where ORB-SLAM failed, and produce a map accurate enough for mobile robot localization.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Configured RTABMap with a ZED Mini stereo camera in ROS 2 Humble. RTABMap's loop closure relies on visual bag-of-words over depth descriptors rather than raw RGB features, making it significantly more robust in low-texture scenes. Tuned the memory management parameters (STM/WM/LTM thresholds) and loop closure minimum inlier count to reduce false positives in repeated corridor sections. Integrated GTSAM factor graph backend for pose graph optimization, reducing accumulated drift on long traversals. Streamed RGB-D point clouds and pose graph to RViz2 for real-time monitoring.</p><p><strong class='text-on-surface'>Result:</strong> Successfully mapped 200+ meters of tunnel corridor with consistent loop closure and no observable drift. ORB-SLAM baseline lost tracking at the first textured-to-untextured transition (~25 meters in). RTABMap map covered all major tunnel junctions with sub-20cm positional consistency at loop closure points. Point cloud resolution sufficient for 2D occupancy grid projection for AMR navigation.</p>",
+    "img": "images/sgas.png",
+    "link": "https://github.com/shrirag10/3D-Mapping-RTAB-SLAM"
+  },
+  "deadreckoning": {
+    "title": "Dead-Reckoning",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> GPS-dependent navigation fails inside buildings, tunnels, and dense urban canyons — exactly the environments where autonomous vehicles and AMRs operate. Pure IMU integration drifts due to accelerometer bias and gyroscope noise, making naive dead reckoning unusable beyond 30 seconds. A principled sensor fusion approach was needed to extend GPS-free positioning to minutes, not seconds.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Develop a dead reckoning system fusing IMU (accelerometer + gyroscope) and magnetometer data to maintain position and heading estimates during GPS outages. Achieve trajectory accuracy comparable to GPS ground truth over a 10-minute circular test route.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Implemented a complementary filter in MATLAB for yaw estimation — high-pass filtering gyroscope integration (drift-prone but responsive) and low-pass filtering magnetometer heading (stable but noisy). Performed hard-iron and soft-iron magnetometer calibration using an ellipsoid fitting algorithm to correct for magnetic distortion from vehicle electronics. Built an EKF layer for position estimation fusing wheel odometry (when available), IMU linear acceleration, and the complementary-filter yaw output. Validated against GPS ground truth using RMSE metrics over circular and straight-line trajectories.</p><p><strong class='text-on-surface'>Result:</strong> Post-calibration magnetometer yaw error reduced from ±35° to ±4° — 8x improvement from hard/soft-iron correction alone. Dead-reckoned trajectory matched GPS ground truth with under 2m RMSE over a 500m circular route. Yaw complementary filter outperformed pure gyro integration (which drifted 90° in 3 minutes) and pure magnetometer (which was noisy in 5 Hz bandwidth). Analysis plots from MATLAB available in the repo.</p>",
+    "img": "https://raw.githubusercontent.com/shrirag10/Dead-Reckoning/main/analysis/Estimated%20trajectory.png",
+    "link": "https://github.com/shrirag10/Dead-Reckoning"
+  },
+  "llmastar": {
+    "title": "Improved-LLM-A-star",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Classical A* is computationally expensive on large, complex maps because it expands nodes exhaustively without high-level spatial reasoning. A human planner looking at a maze immediately identifies \"go through the door, then turn left\" — A* has no such semantic understanding, forcing it to explore dead ends. LLMs can reason about spatial layouts from text descriptions, suggesting them as heuristic enhancers rather than planners.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Evaluate whether LLM-generated intermediate waypoints can reduce A* node expansions on grid maps without sacrificing path optimality. Benchmark across 10x10 and 20x20 grids with varying obstacle density, comparing three prompting strategies: zero-shot, CoT, and RePE (Recursive Plan Evolution).</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Implemented the hybrid planner: map serialized to ASCII grid text, fed to Mistral 7B via Ollama with structured prompts requesting N intermediate waypoints. A* then plans sequentially through waypoint subproblems instead of full grid. Benchmarked three prompting methods: zero-shot (direct waypoint request), CoT (reason step-by-step), RePE (iteratively refine waypoints based on prior A* partial solutions). Measured node expansions, waypoint accuracy (distance from optimal path), and total planning time across 50 randomized grid instances per size.</p><p><strong class='text-on-surface'>Result:</strong> RePE prompts generated the most actionable waypoints — 17.8% improvement in waypoint accuracy over zero-shot. Node expansions reduced by 23.4% on 10x10 grids and 21.6% on 20x20 grids vs. pure A*. Path optimality was preserved: all hybrid paths matched or exceeded pure A* solution quality. RePE outperformed CoT due to its iterative correction mechanism — the LLM sees where A* struggled and adjusts subsequent waypoint suggestions accordingly.</p>",
+    "img": "",
+    "link": "https://github.com/shrirag10/Improved-LLM-A-star"
+  }
+};
+</script>
+<script src="shared.js"></script>
+</body>
+</html>

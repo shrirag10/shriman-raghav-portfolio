@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shriman Raghav Srinivasan — Robotics &amp; Manufacturing Engineer</title>
+  <meta name="description"
+    content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="tailwind.css" />
+</head>
+
+<body class="font-inter antialiased flex flex-col min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur-md"
+    style="background-color: color-mix(in srgb, var(--surface) 85%, transparent); border-bottom: 1px solid var(--outline-variant);">
+    <div class="max-w-[1600px] mx-auto flex justify-between items-center h-20 px-8">
+      <a href="index.html" class="flex items-center">
+        <img src="images/shri_logo.png" alt="Shri" class="h-10" style="object-fit: contain; clip-path: inset(0 3px);" />
+      </a>
+      <div class="hidden md:flex gap-12">
+        <a href="index.html"
+          class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors"
+          style="color: var(--on-surface);">About</a>
+        <a href="projects.html"
+          class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors"
+          style="color: var(--on-surface-variant);">Projects</a>
+        <a href="skills.html"
+          class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors"
+          style="color: var(--on-surface-variant);">Skills</a>
+        <a href="experience.html"
+          class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors"
+          style="color: var(--on-surface-variant);">Experience</a>
+        <a href="publications.html"
+          class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors"
+          style="color: var(--on-surface-variant);">Publications</a>
+        <a href="contact.html"
+          class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors"
+          style="color: var(--on-surface-variant);">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle"
+          class="w-10 h-10 rounded-full flex items-center justify-center border transition-colors hover:bg-surface-container"
+          style="border-color: var(--outline-variant); color: var(--on-surface);">
+          <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+        </button>
+        <a href="index.html#contact"
+          class="hidden md:block border px-6 py-2 rounded-lg font-space text-[0.75rem] uppercase tracking-widest hover:bg-surface-container transition-colors"
+          style="border-color: var(--outline); color: var(--on-surface);">Hire Me</a>
+        <button id="mobile-menu-toggle"
+          class="md:hidden w-10 h-10 rounded-full flex items-center justify-center border transition-colors"
+          style="border-color: var(--outline-variant); color: var(--on-surface);">
+          <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile drawer -->
+    <div id="mobile-menu" class="mobile-nav-drawer md:hidden"
+      style="background-color: var(--surface); border-top: 1px solid var(--outline-variant);">
+      <div class="max-w-[1600px] mx-auto px-8 py-6 flex flex-col gap-5">
+        <a href="index.html" class="font-space text-sm uppercase tracking-widest"
+          style="color: var(--on-surface-variant);">About</a>
+        <a href="projects.html" class="font-space text-sm uppercase tracking-widest"
+          style="color: var(--on-surface-variant);">Projects</a>
+        <a href="skills.html" class="font-space text-sm uppercase tracking-widest"
+          style="color: var(--on-surface-variant);">Skills</a>
+        <a href="experience.html" class="font-space text-sm uppercase tracking-widest"
+          style="color: var(--on-surface-variant);">Experience</a>
+        <a href="publications.html" class="font-space text-sm uppercase tracking-widest"
+          style="color: var(--on-surface-variant);">Publications</a>
+        <a href="contact.html"
+          class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors"
+          style="color: var(--on-surface-variant);">Contact</a>
+        <a href="index.html#contact" class="font-space text-sm uppercase tracking-widest font-bold"
+          style="color: var(--secondary);">Hire Me →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-[1600px] mx-auto px-8 pt-40 pb-24 flex flex-col gap-16 lg:gap-32">
+
+    <!-- NEW HERO LAYOUT -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center min-h-[70vh]">
+
+      <!-- Left Column: Copy -->
+      <div class="lg:col-span-6 flex flex-col gap-8">
+        <div class="text-sm font-space uppercase tracking-[0.2em] font-bold" style="color: var(--on-surface-variant);">
+          — Robotics &amp; Manufacturing Engineer · Northeastern University
+        </div>
+
+        <h1 class="font-serif leading-[1.05] tracking-tight"
+          style="font-size: clamp(3.5rem, 6vw, 5.5rem); color: var(--on-background);">
+          Accelerating Material Flow with <br />Autonomy &amp; <span class="italic"
+            style="color: var(--primary);">Intelligent Coordination.</span>
+        </h1>
+
+        <p class="text-xl leading-relaxed max-w-2xl" style="color: var(--on-surface-variant);">
+          I build systems that help robots understand where they are and what they see — from camera-LiDAR calibration
+          pipelines to real-time visual SLAM and sensor fusion. Seeking new-grad roles in robotics and autonomous
+          systems.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-6 mt-6">
+          <a href="#about"
+            class="px-8 py-4 rounded font-space text-[0.8rem] uppercase tracking-widest font-bold transition-transform active:scale-95 flex items-center gap-2"
+            style="background-color: var(--primary); color: var(--on-primary);">
+            About Me <span class="material-symbols-outlined text-[1.1rem]">arrow_downward</span>
+          </a>
+          <a href="https://linkedin.com/in/shriman-raghav" target="_blank"
+            class="font-space text-[0.8rem] uppercase tracking-widest font-bold border-b-2 border-transparent hover:border-black transition-colors flex items-center gap-2"
+            style="color: var(--on-surface);">
+            LinkedIn <span class="material-symbols-outlined text-[1.1rem]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Stats List -->
+      <div class="lg:col-span-6 flex flex-col gap-[1px] rounded overflow-hidden" style="border: 1px solid var(--outline-variant); background-color: var(--outline-variant);">
+
+        <!-- Stat Item 1 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 p-8" style="background-color: var(--surface);">
+          <div class="font-serif text-[2.5rem] w-32 flex-shrink-0" style="color: var(--primary);">
+            $2.04M
+          </div>
+          <div>
+            <h3 class="font-bold text-[0.95rem] mb-1" style="color: var(--on-surface);">Projected Annual Savings</h3>
+            <p class="text-[0.85rem] leading-relaxed" style="color: var(--on-surface-variant);">Deployed autonomous
+              forklift platforms integrating actuators and path planning.</p>
+          </div>
+        </div>
+
+        <!-- Stat Item 2 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 p-8" style="background-color: var(--surface);">
+          <div class="font-serif text-[2.5rem] w-32 flex-shrink-0" style="color: var(--primary);">
+            83%
+          </div>
+          <div>
+            <h3 class="font-bold text-[0.95rem] mb-1" style="color: var(--on-surface);">Routing Complexity Reduction</h3>
+            <p class="text-[0.85rem] leading-relaxed" style="color: var(--on-surface-variant);">Dynamic rerouting
+              via penalty-optimized Theta* algorithm for internal fleets.</p>
+          </div>
+        </div>
+
+        <!-- Stat Item 3 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 p-8" style="background-color: var(--surface);">
+          <div class="font-serif text-[2.5rem] w-32 flex-shrink-0" style="color: var(--primary);">
+            12.4%
+          </div>
+          <div>
+            <h3 class="font-bold text-[0.95rem] mb-1" style="color: var(--on-surface);">Cycle Time Reduction</h3>
+            <p class="text-[0.85rem] leading-relaxed" style="color: var(--on-surface-variant);">Spearheaded
+              deployment of ABB and Mitsubishi robotic arms applying Lean principles.</p>
+          </div>
+        </div>
+
+        <!-- Stat Item 4 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 p-8" style="background-color: var(--surface);">
+          <div class="font-serif text-[2.5rem] w-32 flex-shrink-0" style="color: var(--primary);">
+            92.3%
+          </div>
+          <div>
+            <h3 class="font-bold text-[0.95rem] mb-1" style="color: var(--on-surface);">Defect Detection Accuracy</h3>
+            <p class="text-[0.85rem] leading-relaxed" style="color: var(--on-surface-variant);">Developed
+              vision-guided SPC standard systems to minimize manual rework.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div style="background-color: var(--surface-container-lowest); width: 100%;">
+    <main class="max-w-[1600px] mx-auto px-8 py-24 flex flex-col gap-16">
+      <!-- ABOUT SECTION -->
+      <section id="about" class="flex flex-col gap-12" style="scroll-margin-top: 100px;">
+
+        <!-- Section Header Line -->
+        <div class="flex items-center gap-4">
+          <div class="text-[0.65rem] font-space uppercase tracking-widest font-bold"
+            style="color: var(--on-surface-variant);">About</div>
+          <div class="flex-grow h-px" style="background-color: var(--outline-variant);"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          <!-- Left Column: Headline & Bio -->
+          <div class="lg:col-span-6 flex flex-col gap-8">
+            <h2 class="font-serif leading-[1.1] tracking-tight"
+              style="font-size: clamp(3rem, 5vw, 4.5rem); color: var(--on-background);">
+              Bridging prototype to production for autonomous systems.
+            </h2>
+
+            <div class="flex flex-col gap-6 text-lg leading-relaxed" style="color: var(--on-surface-variant);">
+              <p>
+                Robotics engineer who deployed autonomous forklifts at Tesla projected to save $2.04M annually. I
+                specialize
+                in taking AMR systems from prototype to production — integrating SLAM, LiDAR perception, and path
+                planning
+                into manufacturing environments where robots work alongside people.
+              </p>
+              <p>
+                Currently pursuing my Master's in Robotics at Northeastern University, Boston. With hands-on experience
+                deploying AMR systems at Tesla and Hero MotoCorp, I bridge the gap between cutting-edge robotics
+                research
+                and real-world industrial applications.
+              </p>
+              <p>
+                I'm passionate about building robots that deliver measurable impact on the factory floor — from
+                reductions
+                in routing complexity to tripling material handling throughput.
+              </p>
+            </div>
+
+            <!-- Education -->
+            <div class="mt-8 flex flex-col gap-6 pt-8 border-t" style="border-color: var(--outline-variant);">
+              <h3 class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">
+                Education</h3>
+
+              <div class="flex flex-col gap-6">
+                <div class="relative pl-6 border-l-2 mb-6 flex gap-4" style="border-color: var(--surface-container-high);">
+                  <div class="absolute w-3 h-3 rounded-full -left-[7px] top-1" style="background-color: var(--primary);"></div>
+                  <img src="images/neu-logo.svg"
+                    alt="Northeastern" class="w-12 h-12 object-contain hidden sm:block bg-white rounded-sm p-1" />
+                  <div>
+                    <div class="font-bold text-lg" style="color: var(--on-surface);">Northeastern University</div>
+                    <div class="text-sm font-bold mt-1" style="color: var(--secondary);">M.S. in Robotics</div>
+                    <div class="text-sm mt-1" style="color: var(--on-surface-variant);">GPA: 3.78 • May 2026 • Boston, MA</div>
+                  </div>
+                </div>
+
+                <div class="relative pl-6 border-l-2 flex gap-4" style="border-color: var(--surface-container-high);">
+                  <div class="absolute w-3 h-3 rounded-full -left-[7px] top-1" style="background-color: var(--surface-container-high);"></div>
+                  <img src="images/srm-logo.jpg" alt="SRMIST"
+                    class="w-12 h-12 object-contain hidden sm:block bg-white rounded-sm p-1" />
+                  <div>
+                    <div class="font-bold text-lg" style="color: var(--on-surface);">SRM Institute of Science &amp;
+                      Tech.</div>
+                    <div class="text-sm font-bold mt-1" style="color: var(--secondary);">B.Tech in Mechatronics</div>
+                    <div class="text-sm mt-1" style="color: var(--on-surface-variant);">GPA: 3.81 • Jul 2022 • Chennai,
+                      India</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Profile Image -->
+          <div class="lg:col-span-6">
+            <div class="w-full aspect-[4/5] relative bg-[#eae8df] rounded-lg overflow-hidden border" style="border-color: var(--outline-variant);">
+              <img src="images/profile.png" alt="Shriman Raghav" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERSONAL INTERESTS -->
+      <section class="bento-card p-8 mb-8">
+        <div class="flex items-center gap-3 mb-8">
+          <span class="material-symbols-outlined" style="color: var(--secondary);">explore</span>
+          <h3 class="font-bold text-lg" style="color: var(--on-surface);">Beyond Robotics</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background-color: var(--surface-container-low);">
+              <span class="material-symbols-outlined" style="color: var(--on-surface-variant);">directions_car</span>
+            </div>
+            <div>
+              <div class="font-bold text-sm" style="color: var(--on-surface);">Motorsports</div>
+              <div class="text-xs mt-1" style="color: var(--on-surface-variant);">Formula 1 enthusiast and passionate
+                about high-performance vehicle dynamics.</div>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background-color: var(--surface-container-low);">
+              <span class="material-symbols-outlined" style="color: var(--on-surface-variant);">fitness_center</span>
+            </div>
+            <div>
+              <div class="font-bold text-sm" style="color: var(--on-surface);">Fitness &amp; Lifting</div>
+              <div class="text-xs mt-1" style="color: var(--on-surface-variant);">Consistent strength training to
+                balance out heavy coding sessions.</div>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background-color: var(--surface-container-low);">
+              <span class="material-symbols-outlined" style="color: var(--on-surface-variant);">menu_book</span>
+            </div>
+            <div>
+              <div class="font-bold text-sm" style="color: var(--on-surface);">Sci-Fi Literature</div>
+              <div class="text-xs mt-1" style="color: var(--on-surface-variant);">Always exploring new concepts in hard
+                science fiction and futurism.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="py-8 border-t mt-auto" style="border-color: var(--outline-variant); background-color: var(--surface);">
+    <div class="max-w-[1600px] mx-auto px-8 flex justify-between items-center text-xs font-space uppercase"
+      style="color: var(--on-surface-variant);">
+      <div>© 2026 Shriman Raghav Srinivasan</div>
+      <div class="flex gap-6">
+        <a href="https://linkedin.com/in/shriman-raghav" target="_blank" class="hover:underline">LinkedIn</a>
+        <a href="https://github.com/shrirag10" target="_blank" class="hover:underline">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+
+</html>

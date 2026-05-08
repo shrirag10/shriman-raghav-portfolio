@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Publications — Shriman Raghav Srinivasan</title>
+<meta name="description" content="Academic publications and research by Shriman Raghav Srinivasan."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="tailwind.css" />
+</head>
+<body class="font-inter antialiased flex flex-col min-h-screen">
+
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md" style="background-color: color-mix(in srgb, var(--surface) 85%, transparent); border-bottom: 1px solid var(--outline-variant);">
+  <div class="max-w-[1600px] mx-auto flex justify-between items-center h-20 px-8">
+    <a href="index.html" class="flex items-center"><img src="images/shri_logo.png" alt="Shri" class="h-10" style="object-fit: contain; clip-path: inset(0 3px);" /></a>
+    <div class="hidden md:flex gap-12">
+      <a href="index.html"      class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Skills</a>
+      <a href="experience.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center border transition-colors hover:bg-surface-container" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <a href="index.html#contact" class="hidden md:block border px-6 py-2 rounded-lg font-space text-[0.75rem] uppercase tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline); color: var(--on-surface);">Hire Me</a>
+      <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center border transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-nav-drawer md:hidden" style="background-color: var(--surface); border-top: 1px solid var(--outline-variant);">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex flex-col gap-5">
+      <a href="index.html"      class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Skills</a>
+      <a href="experience.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html" class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--on-surface);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+      <a href="index.html#contact" class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">Hire Me →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-[1600px] mx-auto px-8 pt-32 pb-24 flex flex-col gap-12 min-h-screen">
+
+  <!-- Page header -->
+  <section class="flex flex-col max-w-4xl">
+    <div class="section-label mb-6">Research &amp; Academia</div>
+    <h1 class="text-headline-md mb-6" style="color: var(--on-background);">Publications</h1>
+    <p class="text-body-lg mb-8" style="color: var(--on-surface-variant);">
+      Academic research focused on robotics, automation, and non-conventional machining. Explore the cited works detailing optimizations in laser beam machining and predictive systems.
+    </p>
+  </section>
+
+  <!-- Metrics row: 4 cards -->
+  <section class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div class="bento-card p-8 flex flex-col items-center justify-center text-center">
+      <span class="material-symbols-outlined text-4xl mb-4" style="color: var(--secondary);">query_stats</span>
+      <div class="text-4xl font-bold font-space mb-2" style="color: var(--on-surface);">41</div>
+      <div class="text-xs font-bold uppercase tracking-widest" style="color: var(--on-surface-variant);">Total Citations</div>
+    </div>
+
+    <div class="bento-card p-8 flex flex-col items-center justify-center text-center">
+      <span class="material-symbols-outlined text-4xl mb-4" style="color: var(--primary);">science</span>
+      <div class="text-4xl font-bold font-space mb-2" style="color: var(--on-surface);">3</div>
+      <div class="text-xs font-bold uppercase tracking-widest" style="color: var(--on-surface-variant);">Published Papers</div>
+    </div>
+
+    <div class="bento-card p-8 flex flex-col items-center justify-center text-center">
+      <span class="material-symbols-outlined text-4xl mb-4" style="color: var(--secondary);">trending_up</span>
+      <div class="text-4xl font-bold font-space mb-2" style="color: var(--on-surface);">2</div>
+      <div class="text-xs font-bold uppercase tracking-widest" style="color: var(--on-surface-variant);">h-index</div>
+    </div>
+
+    <div class="bento-card p-8 flex flex-col items-center justify-center text-center group cursor-pointer" onclick="window.open('https://scholar.google.com/citations?user=tu8HUxUAAAAJ', '_blank')">
+      <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-transform group-hover:scale-110" style="background-color: var(--secondary-container);">
+        <span class="material-symbols-outlined text-2xl" style="color: var(--on-secondary-container);">school</span>
+      </div>
+      <div class="text-sm font-bold mb-1" style="color: var(--on-surface);">Google Scholar</div>
+      <div class="text-xs font-bold uppercase tracking-widest group-hover:underline" style="color: var(--primary);">View Profile →</div>
+    </div>
+
+  </section>
+
+  <!-- Charts row -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Bar chart: citations per paper -->
+    <div class="bento-card p-8 flex flex-col gap-6">
+      <div>
+        <div class="section-label mb-2">Impact</div>
+        <h2 class="text-lg font-bold font-space" style="color: var(--on-surface);">Citation Overview</h2>
+      </div>
+      <div style="position: relative; height: 220px;">
+        <canvas id="citationBarChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Line chart: cumulative growth -->
+    <div class="bento-card p-8 flex flex-col gap-6">
+      <div>
+        <div class="section-label mb-2">Trend</div>
+        <h2 class="text-lg font-bold font-space" style="color: var(--on-surface);">Citation Growth</h2>
+      </div>
+      <div style="position: relative; height: 220px;">
+        <canvas id="citationLineChart"></canvas>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Papers list -->
+  <section class="flex flex-col gap-6 mt-2">
+    <div class="section-label mb-0">Peer-Reviewed Articles</div>
+
+    <!-- Paper 1 -->
+    <div class="bento-card p-8 hover:shadow-lg transition-shadow border-l-4" style="border-left-color: var(--primary);">
+      <div class="flex flex-wrap justify-between items-start gap-4 mb-3">
+        <h3 class="text-lg font-bold leading-snug flex-1" style="color: var(--on-surface);">
+          Investigation of SOD Control on Leather Carbonization in Diode Laser Cutting
+        </h3>
+        <span class="shrink-0 px-3 py-1 rounded-full text-xs font-bold font-space flex items-center gap-1" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+          <span class="material-symbols-outlined" style="font-size: 0.9rem;">format_quote</span>21
+        </span>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-space uppercase tracking-widest" style="color: var(--on-surface-variant);">
+        <span class="flex items-center gap-1">
+          <span class="material-symbols-outlined" style="font-size: 0.9rem;">article</span>
+          Journal of Laser Applications
+        </span>
+        <span style="color: var(--outline-variant);">|</span>
+        <span>2022</span>
+      </div>
+      <p class="text-sm mb-4 leading-relaxed" style="color: var(--on-surface-variant);">
+        Experimental study analyzing Standoff Distance (SOD) control parameters to optimize the carbonization effects during laser beam machining of leather substrates. Characterizes the relationship between SOD variation and surface quality metrics.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">Laser Machining</span>
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">Process Control</span>
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">Mechatronics</span>
+      </div>
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=tu8HUxUAAAAJ&citation_for_view=tu8HUxUAAAAJ:J-pR_7NvFogC" target="_blank"
+         class="text-xs font-bold font-space uppercase tracking-widest hover:underline inline-flex items-center gap-1 transition-opacity hover:opacity-80"
+         style="color: var(--primary);">
+        Read Paper <span class="material-symbols-outlined" style="font-size: 0.9rem;">open_in_new</span>
+      </a>
+    </div>
+
+    <!-- Paper 2 -->
+    <div class="bento-card p-8 hover:shadow-lg transition-shadow border-l-4" style="border-left-color: var(--secondary);">
+      <div class="flex flex-wrap justify-between items-start gap-4 mb-3">
+        <h3 class="text-lg font-bold leading-snug flex-1" style="color: var(--on-surface);">
+          Experimental Investigation of PWM Laser Standoff Distance Control for Power Diode Based LBM
+        </h3>
+        <span class="shrink-0 px-3 py-1 rounded-full text-xs font-bold font-space flex items-center gap-1" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+          <span class="material-symbols-outlined" style="font-size: 0.9rem;">format_quote</span>14
+        </span>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-space uppercase tracking-widest" style="color: var(--on-surface-variant);">
+        <span class="flex items-center gap-1">
+          <span class="material-symbols-outlined" style="font-size: 0.9rem;">article</span>
+          Optics &amp; Laser Technology
+        </span>
+        <span style="color: var(--outline-variant);">|</span>
+        <span>2022</span>
+      </div>
+      <p class="text-sm mb-4 leading-relaxed" style="color: var(--on-surface-variant);">
+        Research into Pulse Width Modulation (PWM) methodologies to enhance precision and control in standoff distance during Laser Beam Machining. Quantifies the effect of duty cycle variation on cut depth and edge quality.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">PWM Control</span>
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">Automation</span>
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">Precision Manufacturing</span>
+      </div>
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=tu8HUxUAAAAJ&citation_for_view=tu8HUxUAAAAJ:wbdj-CoPYUoC" target="_blank"
+         class="text-xs font-bold font-space uppercase tracking-widest hover:underline inline-flex items-center gap-1 transition-opacity hover:opacity-80"
+         style="color: var(--primary);">
+        Read Paper <span class="material-symbols-outlined" style="font-size: 0.9rem;">open_in_new</span>
+      </a>
+    </div>
+
+    <!-- Paper 3 -->
+    <div class="bento-card p-8 hover:shadow-lg transition-shadow border-l-4" style="border-left-color: var(--outline);">
+      <div class="flex flex-wrap justify-between items-start gap-4 mb-3">
+        <h3 class="text-lg font-bold leading-snug flex-1" style="color: var(--on-surface);">
+          Implementation and Performance Analysis of Combined SOD and PWM Control in Diode Based Laser Beam Machining
+        </h3>
+        <span class="shrink-0 px-3 py-1 rounded-full text-xs font-bold font-space flex items-center gap-1" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+          <span class="material-symbols-outlined" style="font-size: 0.9rem;">format_quote</span>6
+        </span>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-space uppercase tracking-widest" style="color: var(--on-surface-variant);">
+        <span class="flex items-center gap-1">
+          <span class="material-symbols-outlined" style="font-size: 0.9rem;">article</span>
+          Measurement Science and Technology
+        </span>
+        <span style="color: var(--outline-variant);">|</span>
+        <span>2023</span>
+      </div>
+      <p class="text-sm mb-4 leading-relaxed" style="color: var(--on-surface-variant);">
+        Comprehensive performance analysis combining SOD and PWM control strategies to evaluate efficiency and precision on leather specimens. Demonstrates synergistic improvement over individual control methods.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">SOD+PWM</span>
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">Combined Control</span>
+        <span class="px-2 py-1 border rounded text-[0.65rem] font-space uppercase tracking-widest" style="border-color: var(--outline-variant); color: var(--on-surface-variant);">Manufacturing</span>
+      </div>
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=tu8HUxUAAAAJ&citation_for_view=tu8HUxUAAAAJ:XiVPGOgt02cC" target="_blank"
+         class="text-xs font-bold font-space uppercase tracking-widest hover:underline inline-flex items-center gap-1 transition-opacity hover:opacity-80"
+         style="color: var(--primary);">
+        Read Paper <span class="material-symbols-outlined" style="font-size: 0.9rem;">open_in_new</span>
+      </a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="py-8 border-t mt-auto" style="border-color: var(--outline-variant); background-color: var(--surface);">
+  <div class="max-w-[1600px] mx-auto px-8 flex justify-between items-center text-xs font-space uppercase" style="color: var(--on-surface-variant);">
+    <div>© 2026 Shriman Raghav Srinivasan</div>
+    <div class="flex gap-6">
+      <a href="https://linkedin.com/in/shriman-raghav" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=tu8HUxUAAAAJ" target="_blank" class="hover:underline">Google Scholar</a>
+      <a href="https://github.com/shrirag10" target="_blank" class="hover:underline">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+
+<script>
+(function () {
+  /* ------------------------------------------------------------------
+     Utility: read a CSS custom property value from :root at call time.
+     This ensures we always get the current theme's resolved value.
+  ------------------------------------------------------------------ */
+  function cssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  /* ------------------------------------------------------------------
+     Build the color palette object used by both charts.
+  ------------------------------------------------------------------ */
+  function palette() {
+    var primary      = cssVar('--primary');
+    var onSurface    = cssVar('--on-surface');
+    var onSurfaceVar = cssVar('--on-surface-variant');
+    var outlineVar   = cssVar('--outline-variant');
+    var surfCont     = cssVar('--surface-container');
+    return { primary: primary, onSurface: onSurface, onSurfaceVariant: onSurfaceVar, outlineVariant: outlineVar, surfaceContainer: surfCont };
+  }
+
+  /* ------------------------------------------------------------------
+     Convert a CSS color string to rgba with a given alpha.
+     Works for hex (#rrggbb / #rgb) and rgb/rgba strings.
+  ------------------------------------------------------------------ */
+  function withAlpha(color, alpha) {
+    var c = color.trim();
+    // hex long  #rrggbb
+    if (/^#[0-9a-fA-F]{6}$/.test(c)) {
+      var r = parseInt(c.slice(1,3),16);
+      var g = parseInt(c.slice(3,5),16);
+      var b = parseInt(c.slice(5,7),16);
+      return 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
+    }
+    // hex short #rgb
+    if (/^#[0-9a-fA-F]{3}$/.test(c)) {
+      var r = parseInt(c[1]+c[1],16);
+      var g = parseInt(c[2]+c[2],16);
+      var b = parseInt(c[3]+c[3],16);
+      return 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
+    }
+    // rgb(...) or rgba(...)
+    var m = c.match(/rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)/);
+    if (m) return 'rgba(' + m[1] + ',' + m[2] + ',' + m[3] + ',' + alpha + ')';
+    // fallback: return as-is
+    return c;
+  }
+
+  /* ------------------------------------------------------------------
+     Short paper labels for the bar chart Y axis.
+  ------------------------------------------------------------------ */
+  var barLabels = [
+    'SOD Control on\nLeather Carbonization',
+    'PWM Laser\nStandoff Distance Control',
+    'Combined SOD\nand PWM Control'
+  ];
+  var barCitations = [21, 14, 6];
+
+  /* ------------------------------------------------------------------
+     Cumulative citation timeline data.
+  ------------------------------------------------------------------ */
+  var lineLabels = ['2022', '2023', '2024', '2025', '2026'];
+  var lineCitations = [2, 8, 25, 38, 41];
+
+  /* ------------------------------------------------------------------
+     Shared Chart.js defaults that respect the theme.
+  ------------------------------------------------------------------ */
+  function applyGlobalDefaults(p) {
+    Chart.defaults.color = p.onSurfaceVariant;
+    Chart.defaults.borderColor = p.outlineVariant;
+    Chart.defaults.font.family = 'Inter, sans-serif';
+    Chart.defaults.font.size = 12;
+  }
+
+  /* ------------------------------------------------------------------
+     Build the horizontal bar chart.
+  ------------------------------------------------------------------ */
+  var barCtx = document.getElementById('citationBarChart').getContext('2d');
+  var barChart = new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: barLabels,
+      datasets: [{
+        label: 'Citations',
+        data: barCitations,
+        backgroundColor: [],   // filled by updateBarColors
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderRadius: 6,
+        borderSkipped: false
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) { return ' ' + ctx.parsed.x + ' citations'; }
+          }
+        }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          max: 25,
+          grid: { color: [] },   // filled by updateBarColors
+          ticks: { stepSize: 5, color: [] }
+        },
+        y: {
+          grid: { display: false },
+          ticks: {
+            color: [],           // filled by updateBarColors
+            font: { size: 11 }
+          }
+        }
+      }
+    }
+  });
+
+  /* ------------------------------------------------------------------
+     Build the line chart.
+  ------------------------------------------------------------------ */
+  var lineCtx = document.getElementById('citationLineChart').getContext('2d');
+  var lineChart = new Chart(lineCtx, {
+    type: 'line',
+    data: {
+      labels: lineLabels,
+      datasets: [{
+        label: 'Cumulative Citations',
+        data: lineCitations,
+        borderColor: [],         // filled by updateLineColors
+        backgroundColor: [],     // filled by updateLineColors
+        borderWidth: 2.5,
+        pointBackgroundColor: [],
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        tension: 0.4,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) { return ' ' + ctx.parsed.y + ' cumulative citations'; }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: [] },   // filled by updateLineColors
+          ticks: { color: [] }
+        },
+        y: {
+          beginAtZero: true,
+          grid: { color: [] },
+          ticks: { color: [], stepSize: 10 }
+        }
+      }
+    }
+  });
+
+  /* ------------------------------------------------------------------
+     Apply the current-theme palette to both charts, then re-render.
+  ------------------------------------------------------------------ */
+  function updateChartColors() {
+    var p = palette();
+    applyGlobalDefaults(p);
+
+    var gridColor = withAlpha(p.outlineVariant, 0.6);
+    var tickColor = p.onSurfaceVariant;
+    var primaryColor = p.primary;
+
+    /* Bar chart */
+    barChart.data.datasets[0].backgroundColor = barCitations.map(function() {
+      return withAlpha(primaryColor, 0.85);
+    });
+    barChart.options.scales.x.grid.color = gridColor;
+    barChart.options.scales.x.ticks.color = tickColor;
+    barChart.options.scales.y.ticks.color = tickColor;
+    barChart.update('none');
+
+    /* Line chart */
+    var fillColor = withAlpha(primaryColor, 0.12);
+    lineChart.data.datasets[0].borderColor = primaryColor;
+    lineChart.data.datasets[0].backgroundColor = fillColor;
+    lineChart.data.datasets[0].pointBackgroundColor = primaryColor;
+    lineChart.options.scales.x.grid.color = gridColor;
+    lineChart.options.scales.x.ticks.color = tickColor;
+    lineChart.options.scales.y.grid.color = gridColor;
+    lineChart.options.scales.y.ticks.color = tickColor;
+    lineChart.update('none');
+  }
+
+  /* Initial paint */
+  updateChartColors();
+
+  /* ------------------------------------------------------------------
+     MutationObserver: re-color charts whenever the dark class
+     is added or removed from <html>.
+  ------------------------------------------------------------------ */
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.attributeName === 'class') {
+        /* CSS variables propagate synchronously once class changes,
+           so we can read them immediately. */
+        updateChartColors();
+      }
+    });
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+})();
+</script>
+
+</body>
+</html>

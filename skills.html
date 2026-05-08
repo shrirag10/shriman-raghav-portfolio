@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Skills — Shriman Raghav Srinivasan</title>
+<meta name="description" content="Technical skills: robotics, AI, manufacturing, and software tools."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<link rel="stylesheet" href="tailwind.css" />
+<style>
+  .skill-row {
+    margin-bottom: 1.25rem;
+  }
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .skill-name {
+    font-weight: 700;
+    color: var(--on-surface);
+    letter-spacing: 0.05em;
+  }
+  .skill-pct {
+    font-weight: 700;
+    color: #10b981; /* Emerald */
+  }
+  .skill-bar-bg {
+    width: 100%;
+    height: 6px;
+    background-color: var(--surface-container-high);
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    width: var(--w);
+    background: linear-gradient(90deg, #22c55e, #10b981); /* Green to Emerald */
+    border-radius: 9999px;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    animation: fillBar 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes fillBar {
+    0% { width: 0; }
+    100% { width: var(--w); }
+  }
+
+  /* Hover effect for bento cards to make them pop */
+  .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(0,0,0,0.15);
+  }
+  html.dark .skill-card:hover {
+    box-shadow: 0 12px 24px -10px rgba(0,0,0,0.5);
+  }
+
+  /* Tools & Tech tag cloud */
+  .tech-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+  .tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background-color: var(--surface-container);
+    color: var(--on-surface-variant);
+    border: 1px solid var(--outline-variant);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+    cursor: default;
+  }
+  .tech-tag:hover {
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+  }
+
+  /* Key Tools pill section */
+  .tool-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 1rem;
+    border-radius: 9999px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    background-color: var(--surface-container-low);
+    color: var(--on-surface);
+    border: 1.5px solid var(--outline-variant);
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+  }
+  .tool-pill:hover {
+    background-color: var(--surface-container-high);
+    border-color: #10b981;
+    color: var(--on-surface);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px -4px rgba(16, 185, 129, 0.3);
+  }
+
+  /* Certification badge */
+  .cert-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    border: 1.5px solid var(--outline-variant);
+    background-color: var(--surface-container-low);
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    flex: 1;
+    min-width: 160px;
+  }
+  .cert-badge:hover {
+    border-color: #10b981;
+    box-shadow: 0 6px 20px -8px rgba(16, 185, 129, 0.4);
+    transform: translateY(-3px);
+  }
+  .cert-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #22c55e22, #10b98133);
+    flex-shrink: 0;
+  }
+  .cert-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--on-surface);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+  }
+  .cert-org {
+    font-size: 0.68rem;
+    color: var(--on-surface-variant);
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body class="font-inter antialiased flex flex-col min-h-screen">
+
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md" style="background-color: color-mix(in srgb, var(--surface) 85%, transparent); border-bottom: 1px solid var(--outline-variant);">
+  <div class="max-w-[1600px] mx-auto flex justify-between items-center h-20 px-8">
+    <a href="index.html" class="flex items-center"><img src="images/shri_logo.png" alt="Shri" class="h-10" style="object-fit: contain; clip-path: inset(0 3px);" /></a>
+    <div class="hidden md:flex gap-12">
+      <a href="index.html"      class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface);">Skills</a>
+      <a href="experience.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html"   class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center border transition-colors hover:bg-surface-container" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <a href="index.html#contact" class="hidden md:block border px-6 py-2 rounded-lg font-space text-[0.75rem] uppercase tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline); color: var(--on-surface);">Hire Me</a>
+      <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center border transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-nav-drawer md:hidden" style="background-color: var(--surface); border-top: 1px solid var(--outline-variant);">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex flex-col gap-5">
+      <a href="index.html"      class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Skills</a>
+      <a href="experience.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+      <a href="index.html#contact" class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">Hire Me →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-[1600px] mx-auto px-8 pt-32 pb-24 flex flex-col gap-16">
+
+  <!-- ── Page Header ── -->
+  <section id="skills">
+    <div class="section-label mb-8">Technical Matrix</div>
+    <h1 class="text-headline-md mb-4" style="color: var(--on-background);">Skills &amp; Tools</h1>
+    <p class="text-body-sm max-w-2xl mb-12" style="color: var(--on-surface-variant);">Spanning robotics software, manufacturing engineering, industrial automation, and ML infrastructure — built across academic research, 2+ years at Hero MotoCorp, and Tesla internship work.</p>
+
+    <!-- ── Tools & Tech Tag Cloud ── -->
+    <div class="bento-card p-8 mb-8 skill-card">
+      <div class="flex items-center gap-3 mb-6 pb-4 border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">label</span>
+        <h2 class="font-bold text-lg" style="color: var(--on-surface);">Tools &amp; Tech at a Glance</h2>
+      </div>
+      <div class="tech-tag-cloud">
+        <!-- Languages -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">code</span>Python</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">code</span>C++17</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">code</span>CUDA</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">code</span>MATLAB</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">code</span>Bash</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">code</span>SQL</span>
+        <!-- ML / Vision -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>PyTorch</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>TensorRT</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>ONNX</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>OpenCV</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>YOLOv8/v11</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>RT-DETR</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>GroundingDINO</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>SAM</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">memory</span>SuperPoint</span>
+        <!-- Robotics -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">smart_toy</span>ROS2 Humble</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">smart_toy</span>MoveIt</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">smart_toy</span>GTSAM</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">smart_toy</span>VINS-Mono</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">smart_toy</span>RTAB-Map</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">smart_toy</span>Intel RealSense</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">smart_toy</span>Velodyne LiDAR</span>
+        <!-- RL / Sim -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">model_training</span>MuJoCo</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">model_training</span>Genesis</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">model_training</span>Isaac Lab</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">model_training</span>PyBullet</span>
+        <!-- Manufacturing -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">precision_manufacturing</span>FlexSim</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">precision_manufacturing</span>SAP ERP</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">precision_manufacturing</span>Power BI</span>
+        <!-- Automation -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">settings_suggest</span>Allen-Bradley PLC</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">settings_suggest</span>Siemens S7</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">settings_suggest</span>Robot Studio</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">settings_suggest</span>EtherCAT</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">settings_suggest</span>CAN bus</span>
+        <!-- Design -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">architecture</span>SolidWorks</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">architecture</span>AutoCAD</span>
+        <!-- DevOps -->
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">terminal</span>Docker</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">terminal</span>Kafka</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">terminal</span>FastAPI</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">terminal</span>gRPC</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">terminal</span>Protobuf</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">terminal</span>GitHub Actions</span>
+        <span class="tech-tag"><span class="material-symbols-outlined" style="font-size:0.9rem;">terminal</span>GitLab CI</span>
+      </div>
+    </div>
+
+    <!-- ── 6-Card Skill Grid ── -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1: AI, Vision & Learning -->
+      <div class="bento-card p-8 skill-card">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b" style="border-color: var(--outline-variant);">
+          <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">memory</span>
+          <h2 class="font-bold text-lg" style="color: var(--on-surface);">AI, Vision &amp; Learning</h2>
+        </div>
+        <div class="flex flex-col">
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">PyTorch / Deep Learning</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 95%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Computer Vision / OpenCV</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 95%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Object Detection (YOLO, RT-DETR)</span><span class="skill-pct">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 92%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">TensorRT / ONNX / Edge AI</span><span class="skill-pct">82%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 82%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Semantic Segmentation (SAM)</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Optical Flow (NeuFlow)</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Feature Extraction (SuperPoint)</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">CUDA Programming</span><span class="skill-pct">78%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 78%;"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Card 2: Robotics, SLAM & Navigation -->
+      <div class="bento-card p-8 skill-card">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b" style="border-color: var(--outline-variant);">
+          <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">smart_toy</span>
+          <h2 class="font-bold text-lg" style="color: var(--on-surface);">Robotics, SLAM &amp; Navigation</h2>
+        </div>
+        <div class="flex flex-col">
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">ROS 2 Humble / ros2_control</span><span class="skill-pct">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 92%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">SLAM (RTAB-Map, VINS-Mono)</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 90%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Path Planning (A*, Theta*, PRM, RRT)</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 95%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">GTSAM Factor Graph Back-end</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Motion Planning (MoveIt)</span><span class="skill-pct">86%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 86%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Visual Servoing (IBVS)</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 90%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">IMU Fusion / Kalman Filtering</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">LiDAR / RGB-D / Intel RealSense</span><span class="skill-pct">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 92%;"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Card 3: RL, Control & Simulation -->
+      <div class="bento-card p-8 skill-card">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b" style="border-color: var(--outline-variant);">
+          <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">model_training</span>
+          <h2 class="font-bold text-lg" style="color: var(--on-surface);">RL, Control &amp; Simulation</h2>
+        </div>
+        <div class="flex flex-col">
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">PPO / SAC / TD-MPC2</span><span class="skill-pct">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 92%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Reward Engineering &amp; Shaping</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 95%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Domain Randomization</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 90%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">MuJoCo / Genesis / Isaac Lab</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">MPC / MPPI / PID Control</span><span class="skill-pct">84%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 84%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Legged Locomotion (Quadruped / H1)</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Sim-to-Real Transfer</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">MATLAB / Simulink Control Design</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Card 4: Manufacturing & Quality -->
+      <div class="bento-card p-8 skill-card">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b" style="border-color: var(--outline-variant);">
+          <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">precision_manufacturing</span>
+          <h2 class="font-bold text-lg" style="color: var(--on-surface);">Manufacturing &amp; Quality</h2>
+        </div>
+        <div class="flex flex-col">
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Lean Six Sigma (DMAIC)</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 95%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">TPM / OEE Analysis</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 90%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">DFM / DFA / DFMEA / PFMEA</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">SPC / 8D Root Cause Analysis</span><span class="skill-pct">87%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 87%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">AMR / Autonomous Forklift Integration</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 95%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Material Flow Planning / Kaizen</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Takt / Cycle Time / Value Stream</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 90%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">FlexSim Simulation Modeling</span><span class="skill-pct">80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 80%;"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Card 5: Industrial Automation & Hardware -->
+      <div class="bento-card p-8 skill-card">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b" style="border-color: var(--outline-variant);">
+          <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">settings_suggest</span>
+          <h2 class="font-bold text-lg" style="color: var(--on-surface);">Industrial Automation &amp; Hardware</h2>
+        </div>
+        <div class="flex flex-col">
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">PLC (Allen-Bradley, Siemens S7, Mitsubishi)</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 90%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Robotic Arms (ABB, Fanuc, KUKA)</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Robot Studio Programming</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">HMI / SCADA Integration</span><span class="skill-pct">84%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 84%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">EtherCAT / CAN Bus</span><span class="skill-pct">80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 80%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">3D Camera Perception (Pallet Detection)</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Fleet Management Systems</span><span class="skill-pct">92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 92%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">SolidWorks / AutoCAD Design</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Card 6: Software, Languages & DevOps -->
+      <div class="bento-card p-8 skill-card">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b" style="border-color: var(--outline-variant);">
+          <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">terminal</span>
+          <h2 class="font-bold text-lg" style="color: var(--on-surface);">Software, Languages &amp; DevOps</h2>
+        </div>
+        <div class="flex flex-col">
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Python (primary)</span><span class="skill-pct">96%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 96%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">C++17 (RAII, modern idioms)</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Docker / CI-CD (GitHub Actions, GitLab)</span><span class="skill-pct">82%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 82%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Kafka / gRPC / Protobuf</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">FastAPI Microservices</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">SQL / SAP ERP / MES</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 85%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">Power BI / Data Dashboards</span><span class="skill-pct">80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 80%;"></div></div></div>
+          <div class="skill-row"><div class="skill-header"><span class="skill-name">MATLAB / Simulink</span><span class="skill-pct">88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="--w: 88%;"></div></div></div>
+        </div>
+      </div>
+
+    </div><!-- end grid -->
+
+    <!-- ── Certifications & Recognition (full-width bento) ── -->
+    <div class="bento-card p-8 mt-6 skill-card">
+      <div class="flex items-center gap-3 mb-8 pb-4 border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">verified</span>
+        <h2 class="font-bold text-lg" style="color: var(--on-surface);">Certifications &amp; Recognition</h2>
+      </div>
+      <div class="flex flex-wrap gap-4">
+
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <span class="material-symbols-outlined" style="font-size:1.2rem; color:#10b981;">architecture</span>
+          </div>
+          <div class="cert-title">Certified SolidWorks Associate</div>
+          <div class="cert-org">CSWA — Dassault Systemes</div>
+        </div>
+
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <span class="material-symbols-outlined" style="font-size:1.2rem; color:#10b981;">account_tree</span>
+          </div>
+          <div class="cert-title">Systems Engineering</div>
+          <div class="cert-org">INCOSE / Course Certification</div>
+        </div>
+
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <span class="material-symbols-outlined" style="font-size:1.2rem; color:#10b981;">energy_savings_leaf</span>
+          </div>
+          <div class="cert-title">ISO 50001 Internal Auditor</div>
+          <div class="cert-org">Energy Management Systems</div>
+        </div>
+
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <span class="material-symbols-outlined" style="font-size:1.2rem; color:#10b981;">precision_manufacturing</span>
+          </div>
+          <div class="cert-title">Mechanism &amp; Robot Kinematics</div>
+          <div class="cert-org">Graduate Coursework — Northeastern</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Key Tools Pill Row ── -->
+    <div class="bento-card p-8 mt-6 skill-card">
+      <div class="flex items-center gap-3 mb-6 pb-4 border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-3xl" style="color: var(--secondary);">build</span>
+        <h2 class="font-bold text-lg" style="color: var(--on-surface);">Key Tools</h2>
+        <span class="font-space text-xs ml-auto" style="color: var(--on-surface-variant);">Daily-driver stack across research and industry work</span>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="tool-pill">Python</span>
+        <span class="tool-pill">PyTorch</span>
+        <span class="tool-pill">ROS2 Humble</span>
+        <span class="tool-pill">GTSAM</span>
+        <span class="tool-pill">MuJoCo</span>
+        <span class="tool-pill">Genesis</span>
+        <span class="tool-pill">Isaac Lab</span>
+        <span class="tool-pill">YOLOv8 / v11</span>
+        <span class="tool-pill">RT-DETR</span>
+        <span class="tool-pill">OpenCV</span>
+        <span class="tool-pill">TensorRT</span>
+        <span class="tool-pill">ONNX</span>
+        <span class="tool-pill">SuperPoint</span>
+        <span class="tool-pill">GroundingDINO</span>
+        <span class="tool-pill">SAM</span>
+        <span class="tool-pill">SolidWorks</span>
+        <span class="tool-pill">AutoCAD</span>
+        <span class="tool-pill">FlexSim</span>
+        <span class="tool-pill">Docker</span>
+        <span class="tool-pill">Kafka</span>
+        <span class="tool-pill">FastAPI</span>
+        <span class="tool-pill">gRPC</span>
+        <span class="tool-pill">Allen-Bradley PLC</span>
+        <span class="tool-pill">Siemens S7</span>
+        <span class="tool-pill">Robot Studio</span>
+        <span class="tool-pill">MATLAB</span>
+        <span class="tool-pill">CUDA</span>
+        <span class="tool-pill">C++17</span>
+        <span class="tool-pill">SAP ERP</span>
+        <span class="tool-pill">Power BI</span>
+        <span class="tool-pill">GitHub Actions</span>
+        <span class="tool-pill">RTAB-Map</span>
+        <span class="tool-pill">VINS-Mono</span>
+        <span class="tool-pill">MoveIt</span>
+        <span class="tool-pill">PyBullet</span>
+        <span class="tool-pill">EtherCAT</span>
+        <span class="tool-pill">Intel RealSense</span>
+        <span class="tool-pill">Velodyne LiDAR</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Contact CTA ── -->
+  
+
+</main>
+
+<footer class="py-8 border-t mt-auto" style="border-color: var(--outline-variant); background-color: var(--surface);">
+  <div class="max-w-[1600px] mx-auto px-8 flex justify-between items-center text-xs font-space uppercase" style="color: var(--on-surface-variant);">
+    <div>© 2026 Shriman Raghav Srinivasan</div>
+    <div class="flex gap-6">
+      <a href="https://linkedin.com/in/shriman-raghav" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="https://github.com/shrirag10" target="_blank" class="hover:underline">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

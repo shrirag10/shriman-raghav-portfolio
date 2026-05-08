@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tesla Integration — Shriman Raghav Srinivasan</title>
+<meta name="description" content="Manufacturing engineering and robotics integration projects at Tesla Fremont Factory."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<link rel="stylesheet" href="tailwind.css" />
+</head>
+<body class="font-inter antialiased flex flex-col min-h-screen">
+
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md" style="background-color: color-mix(in srgb, var(--surface) 85%, transparent); border-bottom: 1px solid var(--outline-variant);">
+  <div class="max-w-[1600px] mx-auto flex justify-between items-center h-20 px-8">
+    <a href="index.html" class="flex items-center"><img src="images/shri_logo.png" alt="Shri" class="h-10" style="object-fit: contain; clip-path: inset(0 3px);" /></a>
+    <div class="hidden md:flex gap-12">
+      <a href="index.html"      class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Skills</a>
+      <a href="experience.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html"   class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center border transition-colors hover:bg-surface-container" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <a href="index.html#contact" class="hidden md:block border px-6 py-2 rounded-lg font-space text-[0.75rem] uppercase tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline); color: var(--on-surface);">Hire Me</a>
+      <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center border transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);">
+        <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-nav-drawer md:hidden" style="background-color: var(--surface); border-top: 1px solid var(--outline-variant);">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex flex-col gap-5">
+      <a href="index.html"      class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">About</a>
+      <a href="projects.html"   class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Projects</a>
+      <a href="skills.html"     class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Skills</a>
+      <a href="experience.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Experience</a>
+      <a href="publications.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Publications</a>
+      <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
+      <a href="index.html#contact" class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">Hire Me →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-[1600px] mx-auto px-8 pt-32 pb-24 flex flex-col gap-16">
+
+  <!-- Header -->
+  <section>
+    <a href="projects.html" class="inline-flex items-center gap-1 text-[0.75rem] font-bold uppercase tracking-widest mb-8 hover:underline" style="color: var(--secondary);"><span class="material-symbols-outlined text-[1rem]">arrow_back</span> Back to Projects</a>
+    <div class="section-label mb-8">Tesla Inc. · Fremont Factory</div>
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+      <div>
+        <h1 class="text-headline-md mb-2" style="color: var(--on-background);">Manufacturing Integration</h1>
+        <p class="text-body-sm" style="color: var(--on-surface-variant);">Deployment of AMRs, path planning, and reliability engineering.</p>
+      </div>
+      <div class="flex gap-2">
+        <button class="chip active px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="all">All</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="robotics">Robotics</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="reliability">Reliability</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="robotics">
+      <div class="h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">forklift</span>
+      </div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Autonomous Forklift AMR Deployment</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Led end-to-end deployment of autonomous forklift AMRs on live factory floors, integrating actuators, sensors, and structural assemblies. Applied DFM/DFA principles to automate pallet handling, enabling $2.04M projected annual cost savings through labor optimization.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="tesla1">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="robotics">
+      <div class="h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">route</span>
+      </div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Penalty-Optimized Theta* Path Planning</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Programmed and deployed AMR path planning using a penalty-optimized Theta* algorithm in the internal fleet manager tool. Enabled real-time dynamic rerouting, reducing routing complexity by 83% and cutting manual routing processes from 3.5 hours to 12 minutes.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="tesla2">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="reliability">
+      <div class="h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">troubleshoot</span>
+      </div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">DFMEA-Driven AGV Reliability</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Owned DFMEA-driven reliability improvements for AGV operations. Addressed derailment root causes and control instabilities through PID tuning, vibration damping, dynamic modeling, and RFID recalibration. Targeted a 35% reduction in unplanned fleet downtime.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="tesla3">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="reliability">
+      <div class="h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">smart_toy</span>
+      </div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">RAG-Based AI Diagnostic Agent</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Deployed a RAG-based AI diagnostic agent integrated with factory maintenance systems. Accelerated root-cause analysis and reduced equipment diagnostic response time by 17%.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="tesla4">View Details</button>
+      </div>
+    </div>
+    
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="robotics">
+      <div class="h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b" style="border-color: var(--outline-variant);">
+        <span class="material-symbols-outlined text-4xl mb-2" style="color: var(--on-surface-variant);">conveyor_belt</span>
+      </div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Retractable Castor-Wheel Drivetrain</h3>
+        <p class="text-sm mb-6 flex-grow" style="color: var(--on-surface-variant);">Designed powered retractable castor-wheel drivetrain for 2,000 lb dollies, streamlining fabrication/assembly and reducing manual handling effort by 23%.</p>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="tesla5">View Details</button>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- Modal -->
+<div id="project-modal" class="fixed inset-0 z-[100] items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+  <div class="bg-surface w-full max-w-2xl rounded-xl border flex flex-col overflow-hidden shadow-2xl relative" style="border-color: var(--outline-variant); max-height: 90vh;">
+    <button id="close-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors z-10">
+      <span class="material-symbols-outlined text-sm">close</span>
+    </button>
+    <div id="modal-media-container" class="w-full h-64 bg-surface-container flex-shrink-0 relative"></div>
+    <div class="p-8 overflow-y-auto">
+      <h2 id="modal-title" class="text-2xl font-bold mb-4" style="color: var(--on-surface);"></h2>
+      <div id="modal-desc" class="text-sm mb-6" style="color: var(--on-surface-variant);"></div>
+      <a id="modal-link" href="#" target="_blank" class="px-6 py-2 rounded border font-space text-xs uppercase tracking-widest hover:bg-surface-container transition-colors items-center gap-2" style="border-color: var(--outline); color: var(--on-surface); display:none;">View Details <span class="material-symbols-outlined text-[1rem]">arrow_forward</span></a>
+    </div>
+  </div>
+</div>
+
+<footer class="py-8 border-t mt-auto" style="border-color: var(--outline-variant); background-color: var(--surface);">
+  <div class="max-w-[1600px] mx-auto px-8 flex justify-between items-center text-xs font-space uppercase" style="color: var(--on-surface-variant);">
+    <div>© 2026 Shriman Raghav Srinivasan</div>
+    <div class="flex gap-6">
+      <a href="https://linkedin.com/in/shriman-raghav" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="https://github.com/shrirag10" target="_blank" class="hover:underline">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.PROJECT_DATA = {
+  "tesla1": {
+    "title": "Autonomous Forklift AMR Deployment",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> The Fremont Factory's high-volume production lines relied heavily on manual pallet handling and traditional forklifts. This reliance created significant material flow bottlenecks, increased the risk of workplace safety incidents, and capped overall factory throughput during peak production hours.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Spearhead the end-to-end integration and deployment of a fleet of Autonomous Mobile Robots (AMRs) specifically designed for heavy-duty forklift operations, aiming to fully automate lineside material delivery without disrupting live manufacturing processes.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Led a cross-functional team to integrate complex drive actuators, 2D/3D safety LiDAR suites, and structural payload assemblies into the AMR chassis. Rigorously applied Design for Manufacturability and Assembly (DFM/DFA) principles to ensure the platforms could be rapidly serviced on the floor. Managed the Site Acceptance Testing (SAT) and mapped the factory layout for the fleet management software.</p><p><strong class='text-on-surface'>Result:</strong> Successfully transitioned 40% of manual pallet movements to the automated fleet. The deployment improved material flow consistency by 22% and enabled a projected annual cost savings of $2.04M through direct labor optimization and reduced forklift maintenance overhead.</p>",
+    "img": "",
+    "link": "#"
+  },
+  "tesla2": {
+    "title": "Penalty-Optimized Theta* Path Planning",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> The factory's legacy AMR fleet manager utilized a rigid, manual waypoint-based routing system. Setting up new routes or modifying existing ones took over 3.5 hours, and the robots lacked the algorithmic intelligence to dynamically reroute around temporary obstacles or congested high-traffic zones.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Develop and deploy a real-time, dynamic path planning solution capable of generating smooth, any-angle trajectories that penalize proximity to dynamic obstacles and high-traffic intersections.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Engineered a custom penalty-optimized Theta* algorithm in Python/C++ to replace the standard A* planner. The algorithm evaluated cost-maps in real-time, applying exponential penalties near restricted zones. I integrated this planner directly into the central fleet manager, allowing robots to receive updated, collision-free trajectories on the fly via ROS 2.</p><p><strong class='text-on-surface'>Result:</strong> The new planner reduced overall routing complexity by 83%, allowing vehicles to maintain higher average speeds through smooth trajectory curves. The time required for operators to set up and configure new factory routes plummeted from 3.5 hours down to just 12 minutes.</p>",
+    "img": "",
+    "link": "#"
+  },
+  "tesla3": {
+    "title": "DFMEA-Driven AGV Reliability",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> The existing Automated Guided Vehicle (AGV) fleet suffered from periodic mechanical derailments and control instabilities during heavy load transfers. These frequent micro-stoppages culminated in significant unplanned factory downtime.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Analyze the failure modes of the AGV systems, identify the mechanical and software root causes, and engineer robust reliability improvements to stabilize the fleet operations.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Led comprehensive Design Failure Mode and Effects Analysis (DFMEA) sessions with hardware and software teams. I addressed control instabilities by re-tuning the PID loops for the drive motors. To solve mechanical derailments, I engineered custom polyurethane vibration damping mounts, developed dynamic wheel-load models in SolidWorks to redistribute chassis weight, and recalibrated the undercarriage RFID sensors for tighter line-tracking.</p><p><strong class='text-on-surface'>Result:</strong> The combined hardware modifications and software tuning efforts eliminated extreme oscillation during cornering. These reliability improvements successfully targeted and achieved a 35% reduction in unplanned fleet downtime, significantly boosting operational uptime and lineside delivery reliability.</p>",
+    "img": "",
+    "link": "#"
+  },
+  "tesla4": {
+    "title": "RAG-Based AI Diagnostic Agent",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Factory maintenance technicians were spending excessive time manually sifting through thousands of pages of static PDF manuals, PLC ladder logic diagrams, and historical maintenance logs whenever a machine threw a complex fault code.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Accelerate the root-cause analysis workflow by providing technicians with instant, context-aware diagnostic information directly on their mobile maintenance tablets.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Developed a Retrieval-Augmented Generation (RAG) based AI diagnostic agent. I built a document ingestion pipeline to vectorize all factory equipment manuals and historical repair tickets into a FAISS database. The LLM was configured to query this database in real-time when a fault code was entered, generating step-by-step troubleshooting guides tailored to the specific machine state.</p><p><strong class='text-on-surface'>Result:</strong> The AI agent successfully automated the information retrieval process, reducing the average equipment diagnostic response time by 17%. Technicians were able to bypass the manual search process and immediately begin targeted repairs, minimizing production delays.</p>",
+    "img": "",
+    "link": "#"
+  },
+  "tesla5": {
+    "title": "Retractable Castor-Wheel Drivetrain",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Operators were required to manually push and position heavy material transport dollies weighing up to 2,000 lbs across uneven factory floors. This high-friction manual handling caused severe ergonomic strain, increased the risk of repetitive motion injuries, and slowed down line-side replenishment cycles.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Design an assisted mobility solution to drastically reduce the manual push/pull forces required by operators, without over-complicating the existing dolly fleet design or increasing its footprint.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Designed and engineered a powered, retractable castor-wheel drivetrain mechanism in SolidWorks. The system utilized a compact planetary gear motor and a pneumatic deployment cylinder. I focused on streamlining the fabrication process using DFM principles, allowing the module to be easily retrofitted onto the undercarriage of the existing dolly fleet.</p><p><strong class='text-on-surface'>Result:</strong> The motorized assist system reduced the physical manual handling effort required by operators by 23%, eliminating severe ergonomic risks. The ease of maneuverability also improved material movement cycle times, ensuring faster and safer lineside replenishment.</p>",
+    "img": "",
+    "link": "#"
+  }
+};
+</script>
+<script src="shared.js"></script>
+</body>
+</html>
