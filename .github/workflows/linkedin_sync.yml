@@ -1,0 +1,41 @@
+name: LinkedIn RSS Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  sync_linkedin:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Need write permission to push changes
+      
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          pip install feedparser python-dateutil beautifulsoup4
+          
+      - name: Run Sync Script
+        env:
+          # The user will store their RSS URL in this secret
+          LINKEDIN_RSS_URL: ${{ secrets.LINKEDIN_RSS_URL }}
+        run: python .scripts/update_linkedin.py
+        
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m "Automated LinkedIn post sync" || echo "No changes to commit"
+          git push
