@@ -89,6 +89,7 @@
         <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="slam">SLAM</button>
         <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="planning">Planning</button>
         <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="manipulation">Manipulation</button>
+        <button class="chip px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="hardware">Hardware</button>
       </div>
     </div>
   </section>
@@ -202,6 +203,45 @@
       </div>
     </div>
 
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="hardware">
+      <img src="https://static.wixstatic.com/media/a72d75_ea63948a7b7f4c4a85e76c1300180a24~mv2.jpg" alt="Diode Laser Cutter" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>hardware</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Diode Laser Cutter</h3>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Small-scale leather manufacturing required precise, non-contact cutting.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Built 3-axis gantry with 20W diode laser & dynamic Z-axis control.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Achieved 40% higher production rates and 15% less material waste.</div>
+        </div>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="lasercutter">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="hardware">
+      <img src="https://static.wixstatic.com/media/a72d75_a5d188a22e84496ea9904b5a7ab19840~mv2.jpg" alt="Nano Swarm Drone" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>flight</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Nano Swarm Drone</h3>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Smart campuses needed autonomous, scalable 24/7 surveillance.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Developed a modular SWARM drone with GPS/IMU and a 3-DOF arm.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Certified to industry standards for secure, real-time campus monitoring.</div>
+        </div>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="nanodrone">View Details</button>
+      </div>
+    </div>
+
+    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="hardware">
+      <img src="https://static.wixstatic.com/media/a72d75_2e456d120c5849bd989d7cb2943d25ae~mv2.jpeg" alt="Zerkix ROV" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>directions_boat</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">Zerkix ROV</h3>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Pipeline inspections required a stable, energy-efficient vehicle.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Built a ray-fish biomimetic ROV with dual thrusters and IMU stabilization.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Reduced drag by 18%, navigating turbulent waters with 49-min runtime.</div>
+        </div>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="zerkixrov">View Details</button>
+      </div>
+    </div>
+
   </section>
 
 </main>
@@ -299,6 +339,24 @@ window.PROJECT_DATA = {
     "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Classical A* is computationally expensive on large, complex maps because it expands nodes exhaustively without high-level spatial reasoning. A human planner looking at a maze immediately identifies \"go through the door, then turn left\" - A* has no such semantic understanding, forcing it to explore dead ends. LLMs can reason about spatial layouts from text descriptions, suggesting them as heuristic enhancers rather than planners.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Evaluate whether LLM-generated intermediate waypoints can reduce A* node expansions on grid maps without sacrificing path optimality. Benchmark across 10x10 and 20x20 grids with varying obstacle density, comparing three prompting strategies: zero-shot, CoT, and RePE (Recursive Plan Evolution).</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Implemented the hybrid planner: map serialized to ASCII grid text, fed to Mistral 7B via Ollama with structured prompts requesting N intermediate waypoints. A* then plans sequentially through waypoint subproblems instead of full grid. Benchmarked three prompting methods: zero-shot (direct waypoint request), CoT (reason step-by-step), RePE (iteratively refine waypoints based on prior A* partial solutions). Measured node expansions, waypoint accuracy (distance from optimal path), and total planning time across 50 randomized grid instances per size.</p><p><strong class='text-on-surface'>Result:</strong> RePE prompts generated the most actionable waypoints - 17.8% improvement in waypoint accuracy over zero-shot. Node expansions reduced by 23.4% on 10x10 grids and 21.6% on 20x20 grids vs. pure A*. Path optimality was preserved: all hybrid paths matched or exceeded pure A* solution quality. RePE outperformed CoT due to its iterative correction mechanism - the LLM sees where A* struggled and adjusts subsequent waypoint suggestions accordingly.</p>",
     "img": "",
     "link": "https://github.com/shrirag10/Improved-LLM-A-star"
+  },
+  "lasercutter": {
+    "title": "Diode Based Laser Cutter",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Small-scale leather manufacturing required a high-precision, low-cost system for adaptive, non-contact laser cutting. Conventional CO2 lasers were power-hungry and bulky.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Develop a three-axis gantry robot laser cutting system with adaptive standoff distance control for leather materials.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Designed a modular aluminum gantry with NEMA 17 steppers and a GRBL control board. Integrated a 20W NEJE diode laser with PWM modulation and a VL6180X time-of-flight sensor for dynamic Z-axis adjustment. Added a dual-fan filtration system for safety.</p><p><strong class='text-on-surface'>Result:</strong> Achieved 40% higher production rates and 15% less material waste than manual methods. The diode laser consumed 30% less power than traditional CO2 systems.</p>",
+    "img": "https://static.wixstatic.com/media/a72d75_ea63948a7b7f4c4a85e76c1300180a24~mv2.jpg",
+    "link": "https://github.com/shrirag10"
+  },
+  "nanodrone": {
+    "title": "Nano Swarm Drone",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Large smart campuses required real-time, non-invasive surveillance to access locations traditional systems couldn't reach, while adhering to safety regulations.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Develop an autonomous drone system capable of SWARM operation, obstacle avoidance, and environmental monitoring for campus security.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Designed a modular drone chassis with GPS/IMU navigation and ultrasonic sensors for collision avoidance. Integrated high-res/thermal cameras and a 3-DOF RRR manipulator arm with DH-parameter kinematics for inspection tasks. Deployed SWARM technology for synchronized monitoring.</p><p><strong class='text-on-surface'>Result:</strong> System aligned with international regulatory standards for remote inspection. Ensured reliable operations in slippery/inaccessible environments and provided scalable 24/7 security surveillance.</p>",
+    "img": "https://static.wixstatic.com/media/a72d75_a5d188a22e84496ea9904b5a7ab19840~mv2.jpg",
+    "link": "https://github.com/shrirag10"
+  },
+  "zerkixrov": {
+    "title": "Zerkix ROV",
+    "desc": "<p class='mb-4'><strong class='text-on-surface'>Situation:</strong> Underwater inspections of pipelines and marine environments required a stable, maneuverable, and energy-efficient vehicle capable of navigating strong currents.</p><p class='mb-4'><strong class='text-on-surface'>Task:</strong> Develop a hydrophilic Remotely Operated Vehicle (ROV) inspired by ray fish to minimize hydrodynamic drag and ensure stability.</p><p class='mb-4'><strong class='text-on-surface'>Action:</strong> Constructed a biomimetic marine-grade plywood chassis. Integrated dual Blue Robotics T200 thrusters, a BNO055 IMU for auto-stabilization, and a Raspberry Pi 4 control hub. Equipped it with dual 12MP cameras, 1500-lumen subsea lights, and a Bar30 pressure sensor for depths up to 50m.</p><p><strong class='text-on-surface'>Result:</strong> The biomimetic design reduced drag by 18% and improved energy efficiency by 20%. The 10kg ROV achieved precise navigation in turbulent waters with a 49-minute runtime on a 10Ah LiPo battery.</p>",
+    "img": "https://static.wixstatic.com/media/a72d75_2e456d120c5849bd989d7cb2943d25ae~mv2.jpeg",
+    "link": "https://github.com/shrirag10"
   }
 };
 </script>
