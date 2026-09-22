@@ -5,11 +5,11 @@ meta_tags = """
   <!-- Open Graph / Social Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Shriman Raghav Srinivasan — Robotics &amp; Manufacturing Engineer" />
-  <meta property="og:description" content="Manufacturing Engineer at Tesla Fremont. MS Robotics, Northeastern, graduated August 2026. Physical AI for material flow and autonomy on brownfield factory floors." />
+  <meta property="og:description" content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />
   <meta property="og:image" content="images/shriman_portfolio.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Shriman Raghav Srinivasan — Robotics &amp; Manufacturing Engineer" />
-  <meta name="twitter:description" content="Manufacturing Engineer at Tesla Fremont. MS Robotics, Northeastern, graduated August 2026. Physical AI for material flow and autonomy on brownfield factory floors." />
+  <meta name="twitter:description" content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />
   <meta name="twitter:image" content="images/shriman_portfolio.png" />
 """
 
@@ -24,11 +24,11 @@ for file_path in html_files:
         continue
         
     # Inject after description
-    if 'content="Manufacturing Engineer at Tesla Fremont. MS Robotics, Northeastern, graduated August 2026. Physical AI for material flow and autonomy on brownfield factory floors." />' in content:
-        target = 'content="Manufacturing Engineer at Tesla Fremont. MS Robotics, Northeastern, graduated August 2026. Physical AI for material flow and autonomy on brownfield factory floors." />'
+    if 'content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />' in content:
+        target = 'content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />'
     elif 'name="description"' in content:
         # Just find the end of the description meta tag
-        target = 'name="description"\n    content="Manufacturing Engineer at Tesla Fremont. MS Robotics, Northeastern, graduated August 2026. Physical AI for material flow and autonomy on brownfield factory floors." />'
+        target = 'name="description"\n    content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />'
     else:
         target = '<title>Shriman Raghav Srinivasan — Robotics &amp; Manufacturing Engineer</title>'
         
