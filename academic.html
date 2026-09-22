@@ -15,11 +15,11 @@
   <!-- Open Graph / Social Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Shriman Raghav Srinivasan | Robotics &amp; Manufacturing Engineer" />
-  <meta property="og:description" content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />
+  <meta property="og:description" content="Manufacturing Engineer at Tesla Fremont. MS Robotics, Northeastern, graduated August 2026. Physical AI for material flow and autonomy on brownfield factory floors." />
   <meta property="og:image" content="images/shriman_portfolio.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Shriman Raghav Srinivasan | Robotics &amp; Manufacturing Engineer" />
-  <meta name="twitter:description" content="MS Robotics at Northeastern. Bridging autonomous systems and production-ready manufacturing. Incoming Manufacturing Engineer at Tesla Fremont." />
+  <meta name="twitter:description" content="Manufacturing Engineer at Tesla Fremont. MS Robotics, Northeastern, graduated August 2026. Physical AI for material flow and autonomy on brownfield factory floors." />
   <meta name="twitter:image" content="images/shriman_portfolio.png" />
 
 
@@ -52,7 +52,7 @@
       <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center border transition-colors hover:bg-surface-container" style="border-color: var(--outline-variant); color: var(--on-surface);">
         <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
       </button>
-      <a href="assets/resumes/General_Manufacturing.pdf" target="_blank" class="hidden md:block border px-6 py-2 rounded-lg font-space text-[0.75rem] uppercase tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline); color: var(--on-surface);">Hire Me</a>
+      <a href="assets/resumes/General_Manufacturing.pdf" target="_blank" class="hidden md:block border px-6 py-2 rounded-lg font-space text-[0.75rem] uppercase tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline); color: var(--on-surface);">Resume</a>
       <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center border transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);">
         <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
       </button>
@@ -66,7 +66,7 @@
       <a href="experience.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Experience</a>
       <a href="publications.html" class="font-space text-sm uppercase tracking-widest" style="color: var(--on-surface-variant);">Publications</a>
       <a href="contact.html" class="font-space text-[0.75rem] uppercase tracking-widest hover:text-primary transition-colors" style="color: var(--on-surface-variant);">Contact</a>
-      <a href="assets/resumes/General_Manufacturing.pdf" target="_blank" class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">Hire Me →</a>
+      <a href="assets/resumes/General_Manufacturing.pdf" target="_blank" class="font-space text-sm uppercase tracking-widest font-bold" style="color: var(--secondary);">Resume →</a>
     </div>
   </div>
 </nav>
@@ -76,11 +76,11 @@
   <!-- Header -->
   <section>
     <a href="projects.html" class="inline-flex items-center gap-1 text-[0.75rem] font-bold uppercase tracking-widest mb-8 hover:underline" style="color: var(--secondary);"><span class="material-symbols-outlined text-[1rem]">arrow_back</span> Back to Projects</a>
-    <div class="section-label mb-8">Northeastern University · MS Robotics</div>
+    <div class="section-label mb-8">Northeastern University · M.S. Robotics · Graduated August 2026</div>
     <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
       <div>
         <h1 class="text-headline-md mb-2" style="color: var(--on-background);">Academic Research</h1>
-        <p class="text-body-sm" style="color: var(--on-surface-variant);">10 projects across SLAM, Computer Vision, Planning, and Reinforcement Learning.</p>
+        <p class="text-body-sm" style="color: var(--on-surface-variant);">NeuFlow V3 leads the grid, with locomotion, SLAM, manipulation, vision, and learning from the M.S.</p>
       </div>
       <div class="flex gap-2 flex-wrap">
         <button class="chip active px-4 py-2 rounded-full text-xs font-space font-bold transition-colors" data-filter="all">All</button>
@@ -96,6 +96,19 @@
 
   <!-- Projects Grid -->
   <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div id="neuflow" class="project-item bento-card flex flex-col overflow-hidden" data-category="vision" style="scroll-margin-top: 120px;">
+      <img src="https://raw.githubusercontent.com/shrirag10/Neuflowv3/main/results/readme_vis/vkitti_scene18_0.png" alt="NeuFlow v3" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>layers</span></div>'"/>
+      <div class="p-6 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">NeuFlow v3</h3>
+        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
+          <div><strong style="color: var(--on-surface);">S:</strong> Optical flow needed sharper depth discontinuity boundaries.</div>
+          <div><strong style="color: var(--on-surface);">A:</strong> Replaced convex upsampler with a 3-scale implicit neural decoder.</div>
+          <div><strong style="color: var(--on-surface);">R:</strong> Achieved best EPE of 3.15px on the VKITTI2 benchmark.</div>
+        </div>
+        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="neuflowv3">View Details</button>
+      </div>
+    </div>
 
     <div class="project-item bento-card flex flex-col overflow-hidden" data-category="rl">
       <img src="https://raw.githubusercontent.com/shrirag10/ROBUSTWALKER/main/assets/go1_trotting.png" alt="ROBUSTWALKER" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>smart_toy</span></div>'"/>
@@ -146,19 +159,6 @@
           <div><strong style="color: var(--on-surface);">R:</strong> Achieved closed-loop 6-DOF velocity control in PyBullet.</div>
         </div>
         <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="visiontouch">View Details</button>
-      </div>
-    </div>
-
-    <div class="project-item bento-card flex flex-col overflow-hidden" data-category="vision">
-      <img src="https://raw.githubusercontent.com/shrirag10/Neuflowv3/main/results/readme_vis/vkitti_scene18_0.png" alt="NeuFlow v3" class="h-48 w-full object-cover border-b" style="border-color: var(--outline-variant);" onerror="this.outerHTML='<div class=\'h-48 w-full bg-surface-container flex items-center justify-center p-6 text-center border-b\' style=\'border-color: var(--outline-variant);\'><span class=\'material-symbols-outlined text-4xl mb-2\' style=\'color: var(--on-surface-variant);\'>layers</span></div>'"/>
-      <div class="p-6 flex flex-col flex-grow">
-        <h3 class="text-lg font-bold mb-2" style="color: var(--on-surface);">NeuFlow v3</h3>
-        <div class="text-xs mb-6 flex-grow space-y-1" style="color: var(--on-surface-variant);">
-          <div><strong style="color: var(--on-surface);">S:</strong> Optical flow needed sharper depth discontinuity boundaries.</div>
-          <div><strong style="color: var(--on-surface);">A:</strong> Replaced convex upsampler with a 3-scale implicit neural decoder.</div>
-          <div><strong style="color: var(--on-surface);">R:</strong> Achieved best EPE of 3.15px on the VKITTI2 benchmark.</div>
-        </div>
-        <button class="view-details w-full py-2 rounded border text-xs font-space uppercase font-bold tracking-widest hover:bg-surface-container transition-colors" style="border-color: var(--outline-variant); color: var(--on-surface);" data-id="neuflowv3">View Details</button>
       </div>
     </div>
 
